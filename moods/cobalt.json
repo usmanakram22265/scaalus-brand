@@ -1,0 +1,91 @@
+{
+  "$description": "Scaalus mood · Cobalt (dark theme). Growth you can see.",
+  "id": "cobalt",
+  "name": "Cobalt",
+  "theme": "dark",
+  "order": 3,
+  "tagline": "Growth you can see.",
+  "description": "The v2 Cobalt ground — deep royal into cobalt — with frosted white glass. Punch from saturation, not darkness.",
+  "good-for": [
+    "Results and big numbers",
+    "Reviews and case studies",
+    "Growth stories"
+  ],
+  "ground": {
+    "gradient": "{gradient.ground-cobalt}",
+    "glow": {
+      "color": "{color.logo-blue}",
+      "alpha": 0.3,
+      "position": "bottom-right",
+      "blur": "very soft, about a third of the frame"
+    }
+  },
+  "mass": {
+    "gradient": "{gradient.mass-glass}",
+    "coverage": "15-30%",
+    "edge": {
+      "color": "{color.white}",
+      "alpha": 0.45,
+      "width": "1px"
+    },
+    "shadow": {
+      "color": "{color.abyss}",
+      "alpha": 0.5,
+      "y": 30,
+      "blur": 60
+    }
+  },
+  "text": {
+    "headline": "{color.white}",
+    "supporting": "{color.cloud}",
+    "meta": "{color.cloud}",
+    "highlight": "{gradient.highlight-glass}",
+    "on-mass": "{color.white}"
+  },
+  "pill": {
+    "fill": "{color.white}",
+    "text": "{color.royal-blue}"
+  },
+  "button": {
+    "style": "solid",
+    "fill": "{color.white}",
+    "text": "{color.royal-blue}"
+  },
+  "lines": {
+    "color": "{color.white}",
+    "alpha": 0.2
+  },
+  "surfaces": {
+    "L0": {
+      "name": "Ground",
+      "fill": "ground"
+    },
+    "L1": {
+      "name": "Surface",
+      "fill": "{color.deep-royal}",
+      "border": {
+        "color": "{color.white}",
+        "alpha": 0.18
+      }
+    },
+    "L2": {
+      "name": "Raised",
+      "fill": {
+        "color": "{color.white}",
+        "alpha": 0.08
+      },
+      "border": {
+        "color": "{color.white}",
+        "alpha": 0.18
+      },
+      "note": "Glass with a fine top edge"
+    },
+    "L3": {
+      "name": "Mass",
+      "fill": "mass",
+      "note": "Depth from edges and glow. No drop shadow on dark grounds."
+    }
+  },
+  "logo": "white",
+  "accent-bar": "{color.white}"
+}

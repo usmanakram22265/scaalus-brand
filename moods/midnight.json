@@ -1,0 +1,87 @@
+{
+  "$description": "Scaalus mood · Midnight (dark theme). Calm, premium, in control.",
+  "id": "midnight",
+  "name": "Midnight",
+  "theme": "dark",
+  "order": 2,
+  "tagline": "Calm, premium, in control.",
+  "description": "A rising sweep of blue light across the brand navy — the quietest, most premium mood.",
+  "good-for": [
+    "Pricing and offers",
+    "Launches and announcements",
+    "Quotes and big promises"
+  ],
+  "ground": {
+    "gradient": "{gradient.ground-midnight}",
+    "glow": {
+      "color": "{color.navy-royal}",
+      "alpha": 0.35,
+      "position": "top-left",
+      "blur": "very soft, about a third of the frame"
+    }
+  },
+  "mass": {
+    "gradient": "{gradient.mass-sweep}",
+    "coverage": "15-30%"
+  },
+  "text": {
+    "headline": "{color.white}",
+    "supporting": "{color.haze}",
+    "meta": "{color.fog}",
+    "highlight": "{gradient.highlight-ice}",
+    "on-mass": "{color.white}"
+  },
+  "pill": {
+    "fill": {
+      "color": "{color.ice}",
+      "alpha": 0.14
+    },
+    "text": "{color.ice}",
+    "border": {
+      "color": "{color.ice}",
+      "alpha": 0.3
+    }
+  },
+  "button": {
+    "style": "solid",
+    "fill": "{color.white}",
+    "text": "{color.navy}"
+  },
+  "lines": {
+    "color": "{color.ice}",
+    "alpha": 0.16
+  },
+  "surfaces": {
+    "L0": {
+      "name": "Ground",
+      "fill": "ground"
+    },
+    "L1": {
+      "name": "Surface",
+      "fill": "{color.navy}",
+      "border": {
+        "color": "{color.ice}",
+        "alpha": 0.14
+      }
+    },
+    "L2": {
+      "name": "Raised",
+      "fill": {
+        "color": "{color.white}",
+        "alpha": 0.08
+      },
+      "border": {
+        "color": "{color.ice}",
+        "alpha": 0.14
+      },
+      "note": "Glass with a fine top edge"
+    },
+    "L3": {
+      "name": "Mass",
+      "fill": "mass",
+      "note": "Depth from edges and glow. No drop shadow on dark grounds."
+    }
+  },
+  "logo": "white",
+  "accent-bar": "{gradient.accent-bar}"
+}

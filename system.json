@@ -1,0 +1,384 @@
+{
+  "$description": "Scaalus colour system v3.1 — principles, heroes, themes and moods, rhythm, proportions, contrast rules, logo, and the automatic image checks. References point into tokens/palette.json, tokens/gradients.json and moods/*.json.",
+  "version": "3.1.0",
+  "date": "2026-10-18",
+  "scope": {
+    "provides": "Colour elements only: the palette, gradients, glows, the six mood colour recipes, text/background pairs, logo colour rules, the dark/light rhythm and the image colour checks.",
+    "does-not-provide": "Visual design. Layout, composition, shapes, imagery, illustration, typography, copy and format are decided fresh by whoever makes each visual — the agent, the designer or the visual tool.",
+    "rule": "Take the elements, decide the visual yourself. Never copy a layout, shape or composition from these guidelines or from earlier posts; the colour cards in the guidelines are abstract illustrations of colour, not templates."
+  },
+  "principles": [
+    {
+      "n": 1,
+      "title": "Elements, not visuals.",
+      "body": "This system gives you colours, gradients, glows and rules. How the visual looks — layout, shapes, imagery, type — is yours to decide, fresh every time."
+    },
+    {
+      "n": 2,
+      "title": "Three heroes, one signature.",
+      "body": "Navy, Scaalus Blue and Mist do most of the work. The logo gradient (blue → indigo → violet) is the signature accent — small, every time."
+    },
+    {
+      "n": 3,
+      "title": "One dark, one light.",
+      "body": "Posts alternate: dark, light, dark, light. Moods rotate inside each theme so no mood repeats until all six have run. Content never locks a mood — each mood lists what it is good for, as a suggestion."
+    },
+    {
+      "n": 4,
+      "title": "Blue leads, always.",
+      "body": "Grounds, colour masses and buttons are blue. The logo's indigo and violet stay small: the accent bar, a highlight end, the logo itself."
+    },
+    {
+      "n": 5,
+      "title": "Glow, never neon. Light, never washed out.",
+      "body": "Dark posts glow from one source. Light posts stay light and get their punch from one saturated blue colour mass."
+    },
+    {
+      "n": 6,
+      "title": "Tinted, never grey. Never purple-led.",
+      "body": "Shadows, borders and glows are tinted blue. No neutral grey, no flat pure-white ground, no purple as a ground or main colour."
+    },
+    {
+      "n": 7,
+      "title": "Readable first.",
+      "body": "Every text colour is listed with the grounds it passes on, measured at the worst point of each gradient and glow."
+    }
+  ],
+  "core": {
+    "hero": [
+      "{color.navy}",
+      "{color.royal}",
+      "{color.mist}"
+    ],
+    "logo": [
+      "{color.logo-blue}",
+      "{color.logo-indigo}",
+      "{color.logo-violet}"
+    ],
+    "accent-bar": {
+      "gradient": "{gradient.accent-bar}",
+      "rule": "The logo gradient as a short accent on every post. On the Cobalt ground use White, because the blue swallows the gradient."
+    },
+    "rule": "Three hero colours do most of the work: Navy for dark, Scaalus Blue for action, Mist for light. The logo colours are the signature accent. Everything else supports these."
+  },
+  "themes": {
+    "dark": {
+      "name": "Dark theme",
+      "tagline": "Glowing from within, never neon.",
+      "moods": [
+        "electric",
+        "midnight",
+        "cobalt"
+      ],
+      "same-in-every-mood": [
+        "Headline in White",
+        "One lit colour mass with a fine light edge — no drop shadows on dark",
+        "Accent bar on every post",
+        "White logo"
+      ],
+      "changes-with-mood": [
+        "Ground",
+        "colour mass",
+        "highlight gradient",
+        "pill",
+        "supporting text",
+        "button style"
+      ],
+      "do": [
+        "Alternate with the other theme; rotate moods",
+        "One colour mass, one glow source",
+        "White headlines; Haze supporting (Cloud on Cobalt)",
+        "Highlight 1–3 words with the mood's highlight gradient",
+        "One button per post",
+        "Accent bar on every post"
+      ],
+      "dont": [
+        "Pure black or grey grounds; Electric as a flat full-frame fill",
+        "Drop shadows on dark — use edges and glow",
+        "Purple or violet grounds or glows",
+        "Scaalus Blue, Electric or Logo Indigo as text on dark",
+        "More than one glowing colour mass",
+        "Teal, cyan-green, yellow, orange, red"
+      ]
+    },
+    "light": {
+      "name": "Light theme",
+      "tagline": "Light and luminous. Punch from one saturated blue, never from a dark block.",
+      "moods": [
+        "daylight",
+        "sky",
+        "frost"
+      ],
+      "same-in-every-mood": [
+        "Headline in Navy #0D2847",
+        "One bright blue colour mass with a shadow tinted in its own colour",
+        "Accent bar on every post",
+        "Colour logo"
+      ],
+      "changes-with-mood": [
+        "Ground tint",
+        "colour mass",
+        "highlight gradient",
+        "pill",
+        "line colour"
+      ],
+      "do": [
+        "Alternate with the other theme; rotate moods",
+        "One saturated colour mass, 15–30% of the frame",
+        "Navy headlines; Slate Blue supporting text",
+        "Highlight 1–3 words with the mood's highlight gradient",
+        "White cards with tinted borders",
+        "Accent bar on every post"
+      ],
+      "dont": [
+        "Navy, Deep Blue or Abyss as a fill — light posts stay light",
+        "A flat pure-white frame with no shape; grey shadows",
+        "Ice, Periwinkle or Logo Blue as small text on light",
+        "Body text on the colour mass",
+        "Violet as the main colour (the logo gradient only ends in it)",
+        "Teal, cyan-green, yellow, orange, red"
+      ]
+    }
+  },
+  "carousel": {
+    "rule": "Every slide in a carousel uses one mood. Logo: the icon alone on the first slide and every slide in between; the icon with 'scaalus' on its right only on the last slide, which also ends with scaalus.com.",
+    "exception": "Dense list slides may switch to Daylight for the inner pages."
+  },
+  "proportions": {
+    "light": [
+      {
+        "part": "Ground",
+        "percent": 65
+      },
+      {
+        "part": "Blue colour mass",
+        "percent": 25
+      },
+      {
+        "part": "Ink text",
+        "percent": 6
+      },
+      {
+        "part": "Highlight + accent",
+        "percent": 4
+      }
+    ],
+    "dark": [
+      {
+        "part": "Ground",
+        "percent": 65
+      },
+      {
+        "part": "Lit colour mass",
+        "percent": 25
+      },
+      {
+        "part": "White text",
+        "percent": 6
+      },
+      {
+        "part": "Highlight + accent",
+        "percent": 4
+      }
+    ],
+    "rules": [
+      "The colour mass covers 15–30% of the frame. Ground: at least 55%.",
+      "Highlight colour on 1–3 words; the accent bar is the only other accent.",
+      "Logo Indigo and Logo Violet together stay under about 5% of the frame."
+    ]
+  },
+  "contrast": {
+    "standard": "WCAG 2.1",
+    "minimums": {
+      "text": 4.5,
+      "headline": 3.0,
+      "ui": 3.0
+    },
+    "how-measured": "Against every stop of the ground gradient and against the ground glow composited at full strength — the worst point counts.",
+    "roles": {
+      "headline": "headline",
+      "supporting": "text",
+      "meta": "text",
+      "highlight": "headline",
+      "on-mass": "headline (white only, at the colour mass's darkest end; body text never sits on the mass)",
+      "pill-text": "text",
+      "button-text": "text"
+    },
+    "forbidden": [
+      {
+        "fg": "{color.periwinkle}",
+        "bg": "light grounds",
+        "why": "too faint on white"
+      },
+      {
+        "fg": "{color.ice}",
+        "bg": "light grounds",
+        "why": "too faint on white"
+      },
+      {
+        "fg": "{color.logo-blue}",
+        "bg": "light grounds",
+        "why": "4.1:1 — under the text minimum"
+      },
+      {
+        "fg": "{color.royal}",
+        "bg": "dark grounds",
+        "why": "under 3:1 on Night Blue"
+      },
+      {
+        "fg": "{color.logo-indigo}",
+        "bg": "dark grounds",
+        "why": "under 3:1 on Night Blue"
+      },
+      {
+        "fg": "{color.logo-violet}",
+        "bg": "light grounds",
+        "why": "accent only, never text"
+      },
+      {
+        "fg": "{color.electric}",
+        "bg": "dark grounds",
+        "why": "2.4:1 on Night Blue"
+      }
+    ]
+  },
+  "logo": {
+    "light": {
+      "lockup": "colour",
+      "files": {
+        "icon-left": "assets/logos/icon-left/scaalus-logo-icon-left-color.png",
+        "icon": "assets/logos/icon/scaalus-icon-color.png"
+      }
+    },
+    "dark": {
+      "lockup": "white",
+      "files": {
+        "icon-left": "assets/logos/icon-left/scaalus-logo-icon-left-white.png",
+        "icon": "assets/logos/icon/scaalus-icon-white.png"
+      }
+    },
+    "which": {
+      "icon-left": "The icon with 'scaalus' on its right. Single posts, stories, reels, ads and banners — and the last slide of a carousel.",
+      "icon": "The icon alone. Every carousel slide except the last (the first slide included); avatars and small spaces."
+    },
+    "tiles": [
+      {
+        "file": "assets/logos/avatars/scaalus-avatar-icon-navy.png",
+        "size": "1024x1024",
+        "use": "Profile picture (default) — white icon on Navy."
+      },
+      {
+        "file": "assets/logos/avatars/scaalus-avatar-icon-royal.png",
+        "size": "1024x1024",
+        "use": "Profile picture, bolder — white icon on Royal."
+      },
+      {
+        "file": "assets/logos/avatars/scaalus-avatar-icon-white.png",
+        "size": "1024x1024",
+        "use": "Profile picture on light-themed platforms — colour icon on White."
+      },
+      {
+        "file": "assets/logos/avatars/scaalus-avatar-icon-navy-max.png",
+        "size": "1024x1024",
+        "use": "App icons and favicons — the icon fills the frame."
+      },
+      {
+        "file": "assets/logos/avatars/scaalus-avatar-lockup-navy.png",
+        "size": "1024x1024",
+        "use": "Square logo card on Navy (link previews, directories)."
+      },
+      {
+        "file": "assets/logos/avatars/scaalus-avatar-lockup-mist.png",
+        "size": "1024x1024",
+        "use": "Square logo card on Mist."
+      },
+      {
+        "file": "assets/logos/banners/scaalus-banner-lockup-navy.png",
+        "size": "1748x900",
+        "use": "Wide banner / cover with the lockup centred on Navy."
+      }
+    ],
+    "rebuild": "Tiles are generated by scripts/make_logo_tiles.py from the transparent masters on exact palette colours. assets/logos/_source/ keeps original and retired files for reference — never use them in posts.",
+    "rules": [
+      "Single posts, stories, reels, ads and banners: the icon with 'scaalus' on its right.",
+      "Carousels: the icon alone on the first slide and on every slide in between. The icon with 'scaalus' on its right appears only on the last slide.",
+      "Colour logo on light moods, white logo on dark moods. The logo keeps its own colours — never recolour it, never put it on the colour mass or a busy area, never add glow or outline.",
+      "Use only these two lockups. The name-first lockup is retired."
+    ],
+    "usage": {
+      "single-post": "icon-left",
+      "story-reel-ad-banner": "icon-left",
+      "carousel-first-slide": "icon",
+      "carousel-middle-slides": "icon",
+      "carousel-last-slide": "icon-left",
+      "note": "icon-left = the icon with 'scaalus' on its right. icon = the icon alone. Colour version on light moods, white version on dark moods."
+    }
+  },
+  "image-checks": {
+    "$description": "Run on every generated image (scripts/check_image.py). Fail any check: regenerate. Never publish a light post that reads half-dark, a dark post with no glow, or a post that reads purple.",
+    "dark": {
+      "mean-luminance-max": 0.2,
+      "glow-pixels-min-percent": 2,
+      "glow-luminance-threshold": 0.5,
+      "glow-and-highlight-max-percent": 30
+    },
+    "light": {
+      "mean-luminance-min": 0.55,
+      "dark-pixels-max-percent": 8,
+      "dark-luminance-threshold": 0.1
+    },
+    "both": {
+      "purple-pixels-max-percent": 5,
+      "purple-hue-range": [
+        248,
+        330
+      ],
+      "purple-min-saturation": 0.35,
+      "purple-hue-note": "HSV hue. Scaalus blues sit at 220–228°, Logo Indigo at 244°, Logo Violet at 258°.",
+      "purple-note": "Violet is an accent: the accent bar, the logo, the end of Daylight's circle. More than 5% means it leaked into the artwork.",
+      "blue-share-min-percent": 60,
+      "blue-hue-range": [
+        200,
+        248
+      ],
+      "coloured-min-saturation": 0.3,
+      "blue-note": "Of all clearly coloured pixels, at least 60% must be blue — blue leads every post.",
+      "warm-pixels-max-percent": 3,
+      "warm-hue-ranges": [
+        [
+          0,
+          70
+        ],
+        [
+          330,
+          360
+        ]
+      ],
+      "warm-min-saturation": 0.45,
+      "warm-note": "No orange, yellow or red casts until accent colours are decided."
+    }
+  },
+  "rhythm": {
+    "rule": "Alternate themes on every post: one dark, then one light. Inside each theme, rotate the moods so the same mood never appears twice in a row in its theme.",
+    "sequence": [
+      "electric",
+      "daylight",
+      "midnight",
+      "sky",
+      "cobalt",
+      "frost"
+    ],
+    "dark": [
+      "electric",
+      "midnight",
+      "cobalt"
+    ],
+    "light": [
+      "daylight",
+      "sky",
+      "frost"
+    ],
+    "how": "Find the last published post's mood in the sequence and use the next one. If you know nothing about earlier posts, start at the top. You may swap to another mood of the same theme when its 'good-for' fits the content clearly better — never break the dark/light alternation.",
+    "carousel": "A carousel counts as one post: one mood for every slide."
+  }
+}

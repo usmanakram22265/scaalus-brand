@@ -1,0 +1,79 @@
+{
+  "$description": "Scaalus mood · Daylight (light theme). Clear, crisp, useful.",
+  "id": "daylight",
+  "name": "Daylight",
+  "theme": "light",
+  "order": 4,
+  "tagline": "Clear, crisp, useful.",
+  "description": "Crisp white to mist with the logo gradient as the one bold colour.",
+  "good-for": [
+    "Tips and checklists",
+    "Step-by-step lists",
+    "Carousel inner slides"
+  ],
+  "ground": {
+    "gradient": "{gradient.ground-daylight}"
+  },
+  "mass": {
+    "gradient": "{gradient.logo}",
+    "coverage": "15-30%"
+  },
+  "text": {
+    "headline": "{color.navy}",
+    "supporting": "{color.slate-blue}",
+    "meta": "{color.slate-blue}",
+    "highlight": "{gradient.highlight-logo}",
+    "on-mass": "{color.white}"
+  },
+  "pill": {
+    "fill": "{color.cloud}",
+    "text": "{color.navy-royal}"
+  },
+  "button": {
+    "style": "solid",
+    "fill": "{color.navy}",
+    "text": "{color.white}"
+  },
+  "lines": "{color.cloud}",
+  "surfaces": {
+    "L0": {
+      "name": "Ground",
+      "fill": "ground"
+    },
+    "L1": {
+      "name": "Surface",
+      "fill": "{color.white}",
+      "border": "{color.cloud}",
+      "shadow": {
+        "color": "{color.navy}",
+        "alpha": 0.08,
+        "y": 8,
+        "blur": 24
+      }
+    },
+    "L2": {
+      "name": "Raised",
+      "fill": {
+        "color": "{color.white}",
+        "alpha": 0.85
+      },
+      "border": "{color.white}",
+      "shadow": {
+        "color": "{color.navy}",
+        "alpha": 0.14,
+        "y": 16,
+        "blur": 40
+      },
+      "note": "Glass"
+    },
+    "L3": {
+      "name": "Mass",
+      "fill": "mass",
+      "shadow": null,
+      "note": "Shadow tinted with the mass colour, never grey."
+    }
+  },
+  "logo": "colour",
+  "accent-bar": "{gradient.accent-bar}",
+  "cards": "{color.white}"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "scaalus-colour-system",
+  "version": "3.1.0",
+  "private": true,
+  "description": "Scaalus colour and theme tokens for social posts \u2014 3 hero colours, logo accents, 6 moods, contrast-checked.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check-contrast.mjs",
+    "pdf": "node scripts/export_pdf.mjs",
+    "serve": "node scripts/serve.mjs",
+    "all": "node scripts/build.mjs && node scripts/check-contrast.mjs && node scripts/export_pdf.mjs",
+    "package": "python3 scripts/package_skill.py"
+  }
+}

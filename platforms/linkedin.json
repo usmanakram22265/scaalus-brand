@@ -1,0 +1,60 @@
+{
+  "$description": "LinkedIn colour rules for Scaalus. Moods come from moods/*.json; this file only says which moods to favour and how gradients adapt to each format.",
+  "platform": "linkedin",
+  "theme-mix": {
+    "dark": 35,
+    "light": 65,
+    "note": "LinkedIn reads professional and calm — lean light, with dark for offers, launches and big proof numbers."
+  },
+  "formats": [
+    {
+      "id": "feed-square",
+      "name": "Feed image",
+      "size": [
+        1200,
+        1200
+      ],
+      "aspect": "1:1",
+      "ground-angle": 160
+    },
+    {
+      "id": "feed-portrait",
+      "name": "Feed portrait",
+      "size": [
+        1080,
+        1350
+      ],
+      "aspect": "4:5",
+      "ground-angle": 165
+    },
+    {
+      "id": "document",
+      "name": "Carousel (PDF document)",
+      "size": [
+        1080,
+        1350
+      ],
+      "aspect": "4:5",
+      "ground-angle": 165,
+      "note": "One mood for the whole document. Cover carries the mass; inner pages use the same ground with the mass at 0–15%."
+    },
+    {
+      "id": "banner",
+      "name": "Profile / page banner",
+      "size": [
+        1584,
+        396
+      ],
+      "aspect": "4:1",
+      "ground-angle": 90,
+      "calm-zones": "Left 400 px is covered by the profile photo on mobile — plain ground only."
+    }
+  ],
+  "favourite-moods": [
+    "daylight",
+    "sky",
+    "cobalt",
+    "midnight"
+  ],
+  "note": "Text-heavy posts: prefer Daylight. Never put more than one line of supporting text on Electric."
+}

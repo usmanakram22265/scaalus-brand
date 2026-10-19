@@ -1,0 +1,107 @@
+{
+  "$description": "Scaalus mood · Electric (dark theme). The call that gets caught.",
+  "id": "electric",
+  "name": "Electric",
+  "theme": "dark",
+  "order": 1,
+  "tagline": "The call that gets caught.",
+  "description": "The v2 Electric aurora — night blue into vivid electric — glowing out of deep blue. Urgent, but never neon.",
+  "good-for": [
+    "Missed calls, lost jobs, slow follow-up",
+    "Urgent problems",
+    "Bold statements"
+  ],
+  "ground": {
+    "gradient": "{gradient.ground-electric}",
+    "glow": {
+      "color": "{color.royal-blue}",
+      "alpha": 0.5,
+      "position": "top-left",
+      "blur": "very soft, about a third of the frame"
+    }
+  },
+  "mass": {
+    "gradient": "{gradient.mass-electric-aurora}",
+    "coverage": "15-30%",
+    "glows": [
+      {
+        "color": "{color.logo-blue}",
+        "alpha": 0.45,
+        "position": "centre",
+        "blur": "inside the mass"
+      },
+      {
+        "color": "{color.periwinkle}",
+        "alpha": 0.3,
+        "position": "top-right",
+        "blur": "inside the mass"
+      }
+    ],
+    "edge": {
+      "color": "{color.cloud}",
+      "alpha": 0.28,
+      "width": "1.5px"
+    },
+    "alternative": {
+      "gradient": "{gradient.mass-royal-aurora}",
+      "when": "A calmer, less vivid Electric post."
+    }
+  },
+  "text": {
+    "headline": "{color.white}",
+    "supporting": "{color.haze}",
+    "meta": "{color.fog}",
+    "highlight": "{gradient.highlight-ice}",
+    "on-mass": "{color.white}"
+  },
+  "pill": {
+    "fill": "{color.ice}",
+    "text": "{color.navy}"
+  },
+  "button": {
+    "style": "glass",
+    "fill": {
+      "color": "{color.white}",
+      "alpha": 0.1
+    },
+    "border": "{color.white}",
+    "text": "{color.white}"
+  },
+  "lines": {
+    "color": "{color.ice}",
+    "alpha": 0.16
+  },
+  "surfaces": {
+    "L0": {
+      "name": "Ground",
+      "fill": "ground"
+    },
+    "L1": {
+      "name": "Surface",
+      "fill": "{color.navy}",
+      "border": {
+        "color": "{color.ice}",
+        "alpha": 0.14
+      }
+    },
+    "L2": {
+      "name": "Raised",
+      "fill": {
+        "color": "{color.white}",
+        "alpha": 0.08
+      },
+      "border": {
+        "color": "{color.ice}",
+        "alpha": 0.14
+      },
+      "note": "Glass with a fine top edge"
+    },
+    "L3": {
+      "name": "Mass",
+      "fill": "mass",
+      "note": "Depth from edges and glow. No drop shadow on dark grounds."
+    }
+  },
+  "logo": "white",
+  "accent-bar": "{gradient.accent-bar}"
+}

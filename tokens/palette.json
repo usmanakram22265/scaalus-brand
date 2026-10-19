@@ -1,0 +1,265 @@
+{
+  "$description": "Scaalus colour palette v3.1 — three hero colours (Navy, Scaalus Blue, Mist), the three logo colours, and fourteen support colours, including the v2 Cobalt and Electric blues. Blue leads every post; the logo's indigo and violet are accents only. No other hex values are allowed.",
+  "color": {
+    "logo-blue": {
+      "$type": "color",
+      "$value": "#4B78EB",
+      "$description": "LOGO · FIXED. The blue end of the logo gradient. Glows, mass highlights, Daylight circle start, accent bar start.",
+      "$extensions": {
+        "scaalus": {
+          "family": "logo",
+          "name": "Logo Blue",
+          "text": "Never small text (4.1:1 under white). Headline-size white text only."
+        }
+      }
+    },
+    "logo-indigo": {
+      "$type": "color",
+      "$value": "#574EDA",
+      "$description": "LOGO · FIXED · ACCENT ONLY. Middle of the logo gradient. Accent bar, highlight end on light, small glow hints. Never a ground or a main mass.",
+      "$extensions": {
+        "scaalus": {
+          "family": "logo",
+          "name": "Logo Indigo",
+          "text": "Highlight end on light grounds (5.5:1 on Mist)."
+        }
+      }
+    },
+    "logo-violet": {
+      "$type": "color",
+      "$value": "#582AC2",
+      "$description": "LOGO · FIXED · ACCENT ONLY. Violet end of the logo gradient. Accent bar end and Daylight circle end — never more than about 5% of a frame.",
+      "$extensions": {
+        "scaalus": {
+          "family": "logo",
+          "name": "Logo Violet",
+          "text": "Never text."
+        }
+      }
+    },
+    "royal": {
+      "$type": "color",
+      "$value": "#2457D6",
+      "$description": "HERO. The brand's one vivid blue: buttons, pills and highlight start on light, the Royal ground, Royal Aurora end.",
+      "$extensions": {
+        "scaalus": {
+          "family": "blues",
+          "name": "Scaalus Blue",
+          "text": "Highlight start on light (5.0:1 on Cloud). Carries white text (6.2:1).",
+          "hero": true
+        }
+      }
+    },
+    "navy-royal": {
+      "$type": "color",
+      "$value": "#21387B",
+      "$description": "Middle of the Royal Aurora, Royal ground start, highlight end on light, pill text on white.",
+      "$extensions": {
+        "scaalus": {
+          "family": "blues",
+          "name": "Navy Royal",
+          "text": "Highlight end and pill text on light (8.9:1 on Cloud)."
+        }
+      }
+    },
+    "royal-blue": {
+      "$type": "color",
+      "$value": "#123499",
+      "$description": "Back from v2. The middle of the Electric aurora and the Cobalt ground; pill and button text on white on Cobalt.",
+      "$extensions": {
+        "scaalus": {
+          "family": "blues",
+          "name": "Royal Blue",
+          "text": "Pill and button text on White (10.6:1). Never text on dark."
+        }
+      }
+    },
+    "cobalt": {
+      "$type": "color",
+      "$value": "#1D46BA",
+      "$description": "Back from v2. The bright end of the Cobalt ground.",
+      "$extensions": {
+        "scaalus": {
+          "family": "blues",
+          "name": "Cobalt",
+          "text": "Never text. Carries white text (8.0:1)."
+        }
+      }
+    },
+    "electric": {
+      "$type": "color",
+      "$value": "#0033FF",
+      "$description": "Back from v2. The vivid end of the Electric aurora — inside the colour mass only, never a flat ground.",
+      "$extensions": {
+        "scaalus": {
+          "family": "blues",
+          "name": "Electric",
+          "text": "Never text on dark (2.4:1 on Night Blue). Carries white headline text (7.2:1)."
+        }
+      }
+    },
+    "periwinkle": {
+      "$type": "color",
+      "$value": "#91AEFD",
+      "$description": "Highlight end on dark, rings, glows and sheen.",
+      "$extensions": {
+        "scaalus": {
+          "family": "blues",
+          "name": "Periwinkle",
+          "text": "Highlight words on dark (7.7:1 on Deep Blue). Never text on light."
+        }
+      }
+    },
+    "ice": {
+      "$type": "color",
+      "$value": "#BED0FE",
+      "$description": "Highlight start and pills on dark, rings and borders on light.",
+      "$extensions": {
+        "scaalus": {
+          "family": "blues",
+          "name": "Ice",
+          "text": "Highlight and pill fill on dark (10.9:1 on Deep Blue). Never text on light."
+        }
+      }
+    },
+    "navy": {
+      "$type": "color",
+      "$value": "#0D2847",
+      "$description": "HERO. The brand's own navy (from v1.0, kept by request): headlines on light (14.9:1 on white), the Midnight and Royal Aurora darks, dark buttons on light.",
+      "$extensions": {
+        "scaalus": {
+          "family": "darks",
+          "name": "Navy",
+          "text": "Headlines, list text and dark buttons on light.",
+          "hero": true
+        }
+      }
+    },
+    "deep-royal": {
+      "$type": "color",
+      "$value": "#0A2472",
+      "$description": "Back from v2 (was Deep Blue). The dark start of the Cobalt ground; Cobalt surfaces.",
+      "$extensions": {
+        "scaalus": {
+          "family": "darks",
+          "name": "Deep Royal",
+          "text": "Never text."
+        }
+      }
+    },
+    "night-blue": {
+      "$type": "color",
+      "$value": "#06174A",
+      "$description": "Back from v2. Electric ground start and Electric aurora start.",
+      "$extensions": {
+        "scaalus": {
+          "family": "darks",
+          "name": "Night Blue",
+          "text": "Never text."
+        }
+      }
+    },
+    "abyss": {
+      "$type": "color",
+      "$value": "#040A26",
+      "$description": "Darkest ground stop (Electric, Midnight). Shadow tint on dark.",
+      "$extensions": {
+        "scaalus": {
+          "family": "darks",
+          "name": "Abyss",
+          "text": "Never text."
+        }
+      }
+    },
+    "white": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Headlines on dark, cards on light, Daylight ground start, glass.",
+      "$extensions": {
+        "scaalus": {
+          "family": "lights",
+          "name": "White",
+          "text": "Headlines on every dark mood."
+        }
+      }
+    },
+    "mist": {
+      "$type": "color",
+      "$value": "#F1F5FF",
+      "$description": "HERO. The light of the system: the cool white ground for light posts (Daylight end, Sky start, Frost).",
+      "$extensions": {
+        "scaalus": {
+          "family": "lights",
+          "name": "Mist",
+          "text": "Never text.",
+          "hero": true
+        }
+      }
+    },
+    "cloud": {
+      "$type": "color",
+      "$value": "#DEE8FF",
+      "$description": "Sky ground end, pills and borders on light, supporting text on Royal.",
+      "$extensions": {
+        "scaalus": {
+          "family": "lights",
+          "name": "Cloud",
+          "text": "Supporting and meta text on Royal (5.0:1)."
+        }
+      }
+    },
+    "slate-blue": {
+      "$type": "color",
+      "$value": "#3A4566",
+      "$description": "Supporting and meta text on light. Tinted blue, never grey.",
+      "$extensions": {
+        "scaalus": {
+          "family": "ink",
+          "name": "Slate Blue",
+          "text": "Supporting and meta on every light mood (7.7:1 on Cloud)."
+        }
+      }
+    },
+    "haze": {
+      "$type": "color",
+      "$value": "#BFCCF0",
+      "$description": "Supporting text on dark.",
+      "$extensions": {
+        "scaalus": {
+          "family": "ink",
+          "name": "Haze",
+          "text": "Supporting on Electric and Midnight."
+        }
+      }
+    },
+    "fog": {
+      "$type": "color",
+      "$value": "#8E9BC4",
+      "$description": "Meta text on dark: counters, small labels, the scaalus.com line.",
+      "$extensions": {
+        "scaalus": {
+          "family": "ink",
+          "name": "Fog",
+          "text": "Meta on Electric and Midnight."
+        }
+      }
+    }
+  },
+  "logo-only": {
+    "$description": "Sampled from the official logo files. The wordmark ink lives only inside the logo.",
+    "logo-ink": {
+      "$type": "color",
+      "$value": "#1B1448"
+    }
+  },
+  "families": {
+    "logo": "Logo · fixed",
+    "blues": "Blues",
+    "darks": "Darks",
+    "lights": "Lights",
+    "ink": "Ink"
+  },
+  "retired": {
+    "never": "Purple or violet as a ground, a main mass or a large fill (the logo's violet is an accent only). No teal, cyan-green, yellow, orange, red or coral — accent colours are a separate decision."
+  }
+}

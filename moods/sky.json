@@ -1,0 +1,103 @@
+{
+  "$description": "Scaalus mood · Sky (light theme). Bright and confident.",
+  "id": "sky",
+  "name": "Sky",
+  "theme": "light",
+  "order": 5,
+  "tagline": "Bright and confident.",
+  "description": "Mist to cloud with one glossy logo-blue to navy-royal element.",
+  "good-for": [
+    "How it works",
+    "Features and explainers",
+    "Friendly everyday posts"
+  ],
+  "ground": {
+    "gradient": "{gradient.ground-sky}",
+    "glow": {
+      "color": "{color.white}",
+      "alpha": 0.7,
+      "position": "top-left",
+      "blur": "very soft, about a third of the frame"
+    }
+  },
+  "mass": {
+    "gradient": "{gradient.mass-sky-block}",
+    "coverage": "15-30%",
+    "glows": [
+      {
+        "color": "{color.periwinkle}",
+        "alpha": 0.9,
+        "position": "top-left",
+        "blur": "inside the block"
+      }
+    ],
+    "shadow": {
+      "color": "{color.navy-royal}",
+      "alpha": 0.5,
+      "y": 30,
+      "blur": 60
+    }
+  },
+  "text": {
+    "headline": "{color.navy}",
+    "supporting": "{color.slate-blue}",
+    "meta": "{color.slate-blue}",
+    "highlight": "{gradient.highlight-royal}",
+    "on-mass": "{color.white}"
+  },
+  "pill": {
+    "fill": "{color.royal}",
+    "text": "{color.white}"
+  },
+  "button": {
+    "style": "solid",
+    "fill": "{color.royal}",
+    "text": "{color.white}"
+  },
+  "lines": "{color.ice}",
+  "surfaces": {
+    "L0": {
+      "name": "Ground",
+      "fill": "ground"
+    },
+    "L1": {
+      "name": "Surface",
+      "fill": "{color.white}",
+      "border": "{color.ice}",
+      "shadow": {
+        "color": "{color.navy}",
+        "alpha": 0.08,
+        "y": 8,
+        "blur": 24
+      }
+    },
+    "L2": {
+      "name": "Raised",
+      "fill": {
+        "color": "{color.white}",
+        "alpha": 0.85
+      },
+      "border": "{color.white}",
+      "shadow": {
+        "color": "{color.navy}",
+        "alpha": 0.14,
+        "y": 16,
+        "blur": 40
+      },
+      "note": "Glass"
+    },
+    "L3": {
+      "name": "Mass",
+      "fill": "mass",
+      "shadow": {
+        "color": "{color.navy-royal}",
+        "alpha": 0.5,
+        "y": 30,
+        "blur": 60
+      },
+      "note": "Shadow tinted with the mass colour, never grey."
+    }
+  },
+  "logo": "colour",
+  "accent-bar": "{gradient.accent-bar}"
+}

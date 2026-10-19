@@ -1,0 +1,60 @@
+{
+  "$description": "Facebook colour rules for Scaalus. Moods come from moods/*.json; this file only says which moods to favour and how gradients adapt to each format.",
+  "platform": "facebook",
+  "theme-mix": {
+    "dark": 50,
+    "light": 50,
+    "note": "Home service owners scroll Facebook on their phones between jobs — high contrast both ways. Offers and calls to action do best here."
+  },
+  "formats": [
+    {
+      "id": "feed-square",
+      "name": "Feed post",
+      "size": [
+        1080,
+        1080
+      ],
+      "aspect": "1:1",
+      "ground-angle": 160
+    },
+    {
+      "id": "feed-portrait",
+      "name": "Feed portrait",
+      "size": [
+        1080,
+        1350
+      ],
+      "aspect": "4:5",
+      "ground-angle": 165
+    },
+    {
+      "id": "story",
+      "name": "Story",
+      "size": [
+        1080,
+        1920
+      ],
+      "aspect": "9:16",
+      "ground-angle": 180,
+      "calm-zones": "Top 250 px and bottom 340 px: plain ground only."
+    },
+    {
+      "id": "link-ad",
+      "name": "Link / ad image",
+      "size": [
+        1200,
+        628
+      ],
+      "aspect": "1.91:1",
+      "ground-angle": 120,
+      "note": "Headline on the left half over ground; the mass carries the visual on the right."
+    }
+  ],
+  "favourite-moods": [
+    "midnight",
+    "frost",
+    "electric",
+    "daylight"
+  ],
+  "note": "Ads: the button colour is the mood's button token — never invent a new CTA colour."
+}

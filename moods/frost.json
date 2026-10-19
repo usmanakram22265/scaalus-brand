@@ -1,0 +1,103 @@
+{
+  "$description": "Scaalus mood · Frost (light theme). Your next step.",
+  "id": "frost",
+  "name": "Frost",
+  "theme": "light",
+  "order": 6,
+  "tagline": "Your next step.",
+  "description": "Mist with an ice haze and one glossy blue element. Built for the click.",
+  "good-for": [
+    "Calls to action",
+    "Free trial and demo invites",
+    "Event or webinar invites"
+  ],
+  "ground": {
+    "gradient": "{gradient.ground-frost}",
+    "glow": {
+      "color": "{color.ice}",
+      "alpha": 0.6,
+      "position": "bottom-left",
+      "blur": "very soft, about a third of the frame"
+    }
+  },
+  "mass": {
+    "gradient": "{gradient.mass-frost-pill}",
+    "coverage": "15-30%",
+    "glows": [
+      {
+        "color": "{color.white}",
+        "alpha": 0.7,
+        "position": "top-left",
+        "blur": "sheen on the pill"
+      }
+    ],
+    "shadow": {
+      "color": "{color.royal}",
+      "alpha": 0.5,
+      "y": 30,
+      "blur": 50
+    }
+  },
+  "text": {
+    "headline": "{color.navy}",
+    "supporting": "{color.slate-blue}",
+    "meta": "{color.slate-blue}",
+    "highlight": "{gradient.highlight-logo}",
+    "on-mass": "{color.white}"
+  },
+  "pill": {
+    "fill": "{color.navy}",
+    "text": "{color.white}"
+  },
+  "button": {
+    "style": "solid",
+    "fill": "{color.royal}",
+    "text": "{color.white}"
+  },
+  "lines": "{color.cloud}",
+  "surfaces": {
+    "L0": {
+      "name": "Ground",
+      "fill": "ground"
+    },
+    "L1": {
+      "name": "Surface",
+      "fill": "{color.white}",
+      "border": "{color.cloud}",
+      "shadow": {
+        "color": "{color.navy}",
+        "alpha": 0.08,
+        "y": 8,
+        "blur": 24
+      }
+    },
+    "L2": {
+      "name": "Raised",
+      "fill": {
+        "color": "{color.white}",
+        "alpha": 0.85
+      },
+      "border": "{color.white}",
+      "shadow": {
+        "color": "{color.navy}",
+        "alpha": 0.14,
+        "y": 16,
+        "blur": 40
+      },
+      "note": "Glass"
+    },
+    "L3": {
+      "name": "Mass",
+      "fill": "mass",
+      "shadow": {
+        "color": "{color.royal}",
+        "alpha": 0.5,
+        "y": 30,
+        "blur": 50
+      },
+      "note": "Shadow tinted with the mass colour, never grey."
+    }
+  },
+  "logo": "colour",
+  "accent-bar": "{gradient.accent-bar}"
+}

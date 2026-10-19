@@ -1,0 +1,50 @@
+{
+  "$description": "Instagram colour rules for Scaalus. Moods come from moods/*.json; this file only says which moods to favour and how gradients adapt to each format.",
+  "platform": "instagram",
+  "theme-mix": {
+    "dark": 55,
+    "light": 45,
+    "note": "Instagram rewards stop-the-scroll contrast — lean dark, but follow the week rhythm in system.json."
+  },
+  "formats": [
+    {
+      "id": "feed-square",
+      "name": "Feed post",
+      "size": [
+        1080,
+        1080
+      ],
+      "aspect": "1:1",
+      "ground-angle": 160
+    },
+    {
+      "id": "feed-portrait",
+      "name": "Feed portrait / carousel slide",
+      "size": [
+        1080,
+        1350
+      ],
+      "aspect": "4:5",
+      "ground-angle": 165
+    },
+    {
+      "id": "story",
+      "name": "Story / reel cover",
+      "size": [
+        1080,
+        1920
+      ],
+      "aspect": "9:16",
+      "ground-angle": 180,
+      "calm-zones": "Top 250 px and bottom 340 px sit under Instagram's own white UI — keep them plain ground (no mass, no highlight, no glow peak) so the UI stays readable."
+    }
+  ],
+  "favourite-moods": [
+    "electric",
+    "cobalt",
+    "sky",
+    "frost"
+  ],
+  "grid": "Look at the last 9 posts before choosing: no two neighbours share a mood, and the grid alternates dark and light at least every 2 posts.",
+  "reels": "Reel covers use the story format and the next mood in the rhythm. The 1:1 centre crop must still show the headline on ground, not on the colour mass."
+}
