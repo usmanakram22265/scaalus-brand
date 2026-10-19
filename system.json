@@ -131,7 +131,7 @@
         "Accent bar on every post"
       ],
       "dont": [
-        "Navy, Deep Blue or Abyss as a fill — light posts stay light",
+        "Navy, Deep Royal, Night Blue or Abyss as a fill — light posts stay light",
         "A flat pure-white frame with no shape; grey shadows",
         "Ice, Periwinkle or Logo Blue as small text on light",
         "Body text on the colour mass",
@@ -270,7 +270,7 @@
       {
         "file": "assets/logos/avatars/scaalus-avatar-icon-royal.png",
         "size": "1024x1024",
-        "use": "Profile picture, bolder — white icon on Royal."
+        "use": "Profile picture, bolder — white icon on Scaalus Blue."
       },
       {
         "file": "assets/logos/avatars/scaalus-avatar-icon-white.png",

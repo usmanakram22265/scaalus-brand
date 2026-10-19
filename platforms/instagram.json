@@ -4,7 +4,7 @@
   "theme-mix": {
     "dark": 55,
     "light": 45,
-    "note": "Instagram rewards stop-the-scroll contrast — lean dark, but follow the week rhythm in system.json."
+    "note": "Instagram rewards stop-the-scroll contrast — lean dark, but keep the one-dark-one-light rhythm in system.json."
   },
   "formats": [
     {

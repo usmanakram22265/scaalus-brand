@@ -40,7 +40,7 @@
     "royal": {
       "$type": "color",
       "$value": "#2457D6",
-      "$description": "HERO. The brand's one vivid blue: buttons, pills and highlight start on light, the Royal ground, Royal Aurora end.",
+      "$description": "HERO. The brand's one vivid blue: buttons, pills and highlight start on light, the Royal Aurora end, Midnight's light sweep.",
       "$extensions": {
         "scaalus": {
           "family": "blues",
@@ -53,7 +53,7 @@
     "navy-royal": {
       "$type": "color",
       "$value": "#21387B",
-      "$description": "Middle of the Royal Aurora, Royal ground start, highlight end on light, pill text on white.",
+      "$description": "Middle of the Royal Aurora, highlight end on light, the glossy element's dark end on Sky and Frost.",
       "$extensions": {
         "scaalus": {
           "family": "blues",
@@ -106,7 +106,7 @@
         "scaalus": {
           "family": "blues",
           "name": "Periwinkle",
-          "text": "Highlight words on dark (7.7:1 on Deep Blue). Never text on light."
+          "text": "Highlight words on dark (7.9:1 on Night Blue). Never text on light."
         }
       }
     },
@@ -118,7 +118,7 @@
         "scaalus": {
           "family": "blues",
           "name": "Ice",
-          "text": "Highlight and pill fill on dark (10.9:1 on Deep Blue). Never text on light."
+          "text": "Highlight and pill fill on dark (11.1:1 on Night Blue). Never text on light."
         }
       }
     },
@@ -138,7 +138,7 @@
     "deep-royal": {
       "$type": "color",
       "$value": "#0A2472",
-      "$description": "Back from v2 (was Deep Blue). The dark start of the Cobalt ground; Cobalt surfaces.",
+      "$description": "Back from v2. The dark start of the Cobalt ground; Cobalt surfaces.",
       "$extensions": {
         "scaalus": {
           "family": "darks",
@@ -199,12 +199,12 @@
     "cloud": {
       "$type": "color",
       "$value": "#DEE8FF",
-      "$description": "Sky ground end, pills and borders on light, supporting text on Royal.",
+      "$description": "Sky ground end, pills and borders on light, supporting text on Cobalt.",
       "$extensions": {
         "scaalus": {
           "family": "lights",
           "name": "Cloud",
-          "text": "Supporting and meta text on Royal (5.0:1)."
+          "text": "Supporting and meta text on Cobalt (5.2:1 worst)."
         }
       }
     },

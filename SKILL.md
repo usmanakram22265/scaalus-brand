@@ -83,7 +83,7 @@ Checks luminance (light stays light, dark has a glow), that blue leads (≥ 60% 
 
 - **Only these 20 colours** — anything else hasn't been contrast-checked and drifts the brand.
 - **Blue leads; never purple-led.** Violet only as the logo, the accent bar, or the last sliver of the logo gradient. No teal, cyan-green, yellow, orange, red or coral — accent colours are an open decision; don't invent them.
-- **Light posts stay light** (no Navy, Deep Blue or Abyss fills). **Dark posts glow from one source** (no pure black, grey grounds or drop shadows).
+- **Light posts stay light** (no Navy, Deep Royal, Night Blue or Abyss fills). **Dark posts glow from one source** (no pure black, grey grounds or drop shadows).
 - **Text colours have homes:** Ice, Periwinkle, Logo Blue never small text on light; Scaalus Blue, Electric and Logo Indigo never text on dark; Electric never a flat full-frame fill. Use only pairs in the mood's `contrast.rows`.
 - **Body text never sits on the colour mass** — only a white headline, at its darkest end.
 

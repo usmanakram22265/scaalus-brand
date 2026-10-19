@@ -56,7 +56,7 @@ window.SCAALUS = {
         214
       ],
       "family": "blues",
-      "description": "HERO. The brand's one vivid blue: buttons, pills and highlight start on light, the Royal ground, Royal Aurora end.",
+      "description": "HERO. The brand's one vivid blue: buttons, pills and highlight start on light, the Royal Aurora end, Midnight's light sweep.",
       "text": "Highlight start on light (5.0:1 on Cloud). Carries white text (6.2:1)."
     },
     "navy-royal": {
@@ -68,7 +68,7 @@ window.SCAALUS = {
         123
       ],
       "family": "blues",
-      "description": "Middle of the Royal Aurora, Royal ground start, highlight end on light, pill text on white.",
+      "description": "Middle of the Royal Aurora, highlight end on light, the glossy element's dark end on Sky and Frost.",
       "text": "Highlight end and pill text on light (8.9:1 on Cloud)."
     },
     "royal-blue": {
@@ -117,7 +117,7 @@ window.SCAALUS = {
       ],
       "family": "blues",
       "description": "Highlight end on dark, rings, glows and sheen.",
-      "text": "Highlight words on dark (7.7:1 on Deep Blue). Never text on light."
+      "text": "Highlight words on dark (7.9:1 on Night Blue). Never text on light."
     },
     "ice": {
       "name": "Ice",
@@ -129,7 +129,7 @@ window.SCAALUS = {
       ],
       "family": "blues",
       "description": "Highlight start and pills on dark, rings and borders on light.",
-      "text": "Highlight and pill fill on dark (10.9:1 on Deep Blue). Never text on light."
+      "text": "Highlight and pill fill on dark (11.1:1 on Night Blue). Never text on light."
     },
     "navy": {
       "name": "Navy",
@@ -152,7 +152,7 @@ window.SCAALUS = {
         114
       ],
       "family": "darks",
-      "description": "Back from v2 (was Deep Blue). The dark start of the Cobalt ground; Cobalt surfaces.",
+      "description": "Back from v2. The dark start of the Cobalt ground; Cobalt surfaces.",
       "text": "Never text."
     },
     "night-blue": {
@@ -212,8 +212,8 @@ window.SCAALUS = {
         255
       ],
       "family": "lights",
-      "description": "Sky ground end, pills and borders on light, supporting text on Royal.",
-      "text": "Supporting and meta text on Royal (5.0:1)."
+      "description": "Sky ground end, pills and borders on light, supporting text on Cobalt.",
+      "text": "Supporting and meta text on Cobalt (5.2:1 worst)."
     },
     "slate-blue": {
       "name": "Slate Blue",
@@ -603,7 +603,7 @@ window.SCAALUS = {
       "group": "mass",
       "angle": 160,
       "theme": "dark",
-      "use": "Frosted white glass for elements on the Royal ground.",
+      "use": "Frosted white glass for elements on the Cobalt ground.",
       "stops": [
         {
           "token": "white",
@@ -1770,7 +1770,7 @@ window.SCAALUS = {
           "group": "mass",
           "angle": 160,
           "theme": "dark",
-          "use": "Frosted white glass for elements on the Royal ground.",
+          "use": "Frosted white glass for elements on the Cobalt ground.",
           "stops": [
             {
               "token": "white",
@@ -3535,7 +3535,7 @@ window.SCAALUS = {
           "Accent bar on every post"
         ],
         "dont": [
-          "Navy, Deep Blue or Abyss as a fill — light posts stay light",
+          "Navy, Deep Royal, Night Blue or Abyss as a fill — light posts stay light",
           "A flat pure-white frame with no shape; grey shadows",
           "Ice, Periwinkle or Logo Blue as small text on light",
           "Body text on the colour mass",
@@ -3702,7 +3702,7 @@ window.SCAALUS = {
         {
           "file": "assets/logos/avatars/scaalus-avatar-icon-royal.png",
           "size": "1024x1024",
-          "use": "Profile picture, bolder — white icon on Royal."
+          "use": "Profile picture, bolder — white icon on Scaalus Blue."
         },
         {
           "file": "assets/logos/avatars/scaalus-avatar-icon-white.png",
@@ -3879,7 +3879,7 @@ window.SCAALUS = {
       "theme-mix": {
         "dark": 55,
         "light": 45,
-        "note": "Instagram rewards stop-the-scroll contrast — lean dark, but follow the week rhythm in system.json."
+        "note": "Instagram rewards stop-the-scroll contrast — lean dark, but keep the one-dark-one-light rhythm in system.json."
       },
       "formats": [
         {
