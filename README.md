@@ -1,9 +1,9 @@
 # Scaalus brand system
 
-The source of truth for every Scaalus post, ad, banner and image prompt: **the message** (who Scaalus serves, what it delivers and how to say it, always the result, never the service) in [`business.json`](business.json), and **the colours** in [`dist/brand.json`](dist/brand.json). **Elements only, not visuals.** This repo supplies the message, colours, gradients, glows, mood colour recipes, contrast-checked text pairs, logo colour rules and image checks. The visual itself (layout, composition, shapes, imagery, typography, copy) is decided fresh by whoever makes it: an agent, a designer or a visual tool. Never copy a layout from the guidelines or from earlier posts. The colour cards in the PDF are abstract colour illustrations, not templates.
+The source of truth for every Scaalus post, ad, banner and image prompt: **the message** (who Scaalus serves, what it delivers and how to say it, always the result, never the service) in [`business.json`](business.json), **the colours** in [`dist/brand.json`](dist/brand.json) and **the fonts** in [`typography.json`](typography.json). **Elements only, not visuals.** This repo supplies the message, colours, gradients, glows, mood colour recipes, contrast-checked text pairs, logo colour rules, image checks and font pairings. The visual itself (layout, composition, shapes, imagery, how the type is set, copy) is decided fresh by whoever makes it: an agent, a designer or a visual tool. Never copy a layout from the guidelines or from earlier posts. The colour cards in the PDF are abstract colour illustrations, not templates.
 
 - **Agents:** this repo is the Claude skill `scaalus-brand`. Start with [`SKILL.md`](SKILL.md), then read [`dist/brand.json`](dist/brand.json). This folder is the **main** version; the installed skill is a separate read-only copy, so other sessions can't change the main project.
-- **People:** open [`guidelines/scaalus-colour-guidelines.pdf`](guidelines/scaalus-colour-guidelines.pdf) (28 pages), or the live version at `guidelines/index.html` (`node scripts/serve.mjs`).
+- **People:** open [`guidelines/scaalus-brand-guidelines.pdf`](guidelines/scaalus-brand-guidelines.pdf) (35 pages: colour, logo and typography), or the live version at `guidelines/index.html` (`node scripts/serve.mjs`).
 
 ## Install the skill
 
@@ -15,7 +15,7 @@ curl -fsSL https://raw.githubusercontent.com/usmanakram22265/scaalus-brand/main/
 
 Never link the installed skill to the main repo: a link lets every Claude session that uses the skill edit the main project.
 
-**Claude chat (claude.ai):** download [`dist/scaalus-brand.skill`](dist/scaalus-brand.skill) (slim, 1 MB) and upload it in Claude's skills settings. For the complete repo (PDF, guidelines page, all scripts and logo originals), run `python3 scripts/package_skill.py --full` and upload `dist/scaalus-brand-full.skill` (about 14 MB) instead.
+**Claude chat (claude.ai):** download [`dist/scaalus-brand.skill`](dist/scaalus-brand.skill) (slim, 1 MB) and upload it in Claude's skills settings. For the complete repo (PDF, guidelines page, all scripts and logo originals), run `python3 scripts/package_skill.py --full` and upload `dist/scaalus-brand-full.skill` (about 17 MB) instead.
 
 Once installed, ask for anything Scaalus-coloured ("make an Insta post about missed calls", "is this on brand?") and Claude loads the skill automatically.
 
@@ -47,11 +47,14 @@ Once installed, ask for anything Scaalus-coloured ("make an Insta post about mis
 
 Every text colour in every mood passes WCAG AA, measured at the worst point of its gradient and glow (`node scripts/check-contrast.mjs`).
 
+**Fonts:** 20 free fonts (Google Fonts and Fontshare), shortlisted by eye from premium brand work on Pinterest for a modern, minimal, creative and professional look. They are grouped as workhorse, display, accent serif and label, with 11 pairings from *Signature* (Poppins, the default) to *Creative editorial* (Clash Display + Satoshi + an Instrument Serif accent). Use one pairing per visual and rotate pairings like moods. Details in [`typography.json`](typography.json) and the Typography section of the PDF.
+
 ## Repo map
 
 ```
 SKILL.md                  the skill: message, palette, rhythm, mood recipe, rules (agent entry point)
 business.json             who we serve, services → results, messaging rules, voice
+typography.json           20 shortlisted fonts, 11 pairings, type rules, embed URLs
 AGENTS.md                 pointer to SKILL.md for non-Claude agents
 dist/brand.json           everything resolved to hex (generated, the file agents read)
 dist/tokens.css           CSS variables, one [data-mood] block per mood (generated)
@@ -68,9 +71,9 @@ guidelines/               the guidelines page and its PDF export
 scripts/                  build, contrast check, PDF export, preview server, logo tiles, image check, skill install
 ```
 
-## Changing a colour
+## Changing a colour or font
 
-1. Edit `tokens/palette.json`, `tokens/gradients.json`, a `moods/*.json` file or `system.json`.
+1. Edit `tokens/palette.json`, `tokens/gradients.json`, a `moods/*.json` file, `system.json` or `typography.json`.
 2. `node scripts/build.mjs`
 3. `node scripts/check-contrast.mjs` must print "All moods pass".
 4. `node scripts/export_pdf.mjs` refreshes the PDF.

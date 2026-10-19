@@ -1,0 +1,420 @@
+{
+  "$description": "Scaalus typography — a shortlist of modern, minimal, creative, professional and premium fonts, identified by their letterforms from Pinterest research ('modern minimal font', 'premium creative sans serif font branding', 'minimal premium typography instagram post design') and matched to free commercial fonts. Elements only: pick a pairing, design the visual fresh.",
+  "version": "1.0.0",
+  "default-pairing": "signature",
+  "embed": {
+    "google": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;800&family=Manrope:wght@400;600;800&family=Outfit:wght@400;600;700&family=Urbanist:wght@300;500;700&family=Geist:wght@400;700&family=Geist+Mono:wght@400;500&family=Inter:wght@400;600&family=Inter+Tight:wght@700&family=Syne:wght@600;700;800&family=Unbounded:wght@500;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Archivo:wdth,wght@62..125,400..900&family=Sora:wght@400;700&family=Instrument+Serif:ital@0;1&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syncopate:wght@400;700&display=swap",
+    "fontshare": "https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=satoshi@400,500,700,900&f[]=clash-display@500,600,700&f[]=cabinet-grotesk@500,700,800"
+  },
+  "roles": {
+    "workhorse": "Headlines and all body text — readable at every size.",
+    "display": "Big headlines, numbers and covers only — character and impact.",
+    "accent": "Serif for 1–3 highlight words, quotes and testimonials.",
+    "label": "Short uppercase labels and pills."
+  },
+  "fonts": [
+    {
+      "id": "poppins",
+      "name": "Poppins",
+      "css-family": "Poppins",
+      "role": "workhorse",
+      "style": "Geometric sans, friendly and clear",
+      "why": "The original Scaalus font — keeps continuity with the website and v1 materials.",
+      "seen-on-pinterest": "Brand v1 font (not from Pinterest)",
+      "weights": "400 · 500 · 600 · 700",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Poppins",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)"
+    },
+    {
+      "id": "plus-jakarta-sans",
+      "name": "Plus Jakarta Sans",
+      "css-family": "Plus Jakarta Sans",
+      "role": "workhorse",
+      "style": "Geometric-grotesk hybrid, crisp and premium",
+      "why": "Modern SaaS polish with a large x-height; reads well small and looks expensive big.",
+      "seen-on-pinterest": "'Clarity' and 'Gaglio' pins — large x-height geometric workhorse",
+      "weights": "400 · 600 · 800",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Plus+Jakarta+Sans",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)"
+    },
+    {
+      "id": "general-sans",
+      "name": "General Sans",
+      "css-family": "General Sans",
+      "role": "workhorse",
+      "style": "Neutral geometric grotesk",
+      "why": "Calm, confident and premium; pairs with any display font.",
+      "seen-on-pinterest": "'Batica' and 'Balimo' pins",
+      "weights": "400 · 500 · 600 · 700",
+      "source": "fontshare",
+      "url": "https://www.fontshare.com/fonts/general-sans",
+      "license": "Free for commercial use — ITF Free Font License (Fontshare). Don't redistribute the files."
+    },
+    {
+      "id": "satoshi",
+      "name": "Satoshi",
+      "css-family": "Satoshi",
+      "role": "workhorse",
+      "style": "Modernist geometric sans with crisp terminals",
+      "why": "Feels current and design-led without shouting.",
+      "seen-on-pinterest": "'nifty.' and 'Methane' pins",
+      "weights": "400 · 500 · 700 · 900",
+      "source": "fontshare",
+      "url": "https://www.fontshare.com/fonts/satoshi",
+      "license": "Free for commercial use — ITF Free Font License (Fontshare). Don't redistribute the files."
+    },
+    {
+      "id": "manrope",
+      "name": "Manrope",
+      "css-family": "Manrope",
+      "role": "workhorse",
+      "style": "Semi-rounded modern grotesk",
+      "why": "Friendly but professional; excellent for body copy and numbers.",
+      "seen-on-pinterest": "'Colasta' and 'Kruisel' pins",
+      "weights": "400 · 600 · 800",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Manrope",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)"
+    },
+    {
+      "id": "outfit",
+      "name": "Outfit",
+      "css-family": "Outfit",
+      "role": "workhorse",
+      "style": "Clean geometric with round bowls",
+      "why": "Bold weights make punchy, tight headlines.",
+      "seen-on-pinterest": "'Some Google Fonts' and 'Olline' pins",
+      "weights": "400 · 600 · 700",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Outfit",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)"
+    },
+    {
+      "id": "urbanist",
+      "name": "Urbanist",
+      "css-family": "Urbanist",
+      "role": "workhorse",
+      "style": "Airy geometric, single-storey a",
+      "why": "Light weights feel premium and minimal; bold weights stay friendly.",
+      "seen-on-pinterest": "Seen directly — the 'urbanist.' specimen pin",
+      "weights": "300 · 500 · 700",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Urbanist",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)"
+    },
+    {
+      "id": "geist",
+      "name": "Geist",
+      "css-family": "Geist",
+      "role": "workhorse",
+      "style": "Swiss neo-grotesk with a tech edge (+ Geist Mono)",
+      "why": "Precise and premium; Geist Mono adds a techy label/number voice.",
+      "seen-on-pinterest": "Seen directly — the 'Geist.' pin; also 'Modernist'",
+      "weights": "400 · 700 (Mono 400 · 500)",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Geist",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)"
+    },
+    {
+      "id": "inter",
+      "name": "Inter",
+      "css-family": "Inter",
+      "role": "workhorse",
+      "style": "Neutral neo-grotesk (+ Inter Tight for headlines)",
+      "why": "The most readable body font on phones; Inter Tight gives dense, confident headlines.",
+      "seen-on-pinterest": "'Rare Font Finds' and the editorial-grid post designs",
+      "weights": "400 · 600 (Tight 700)",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Inter",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)"
+    },
+    {
+      "id": "clash-display",
+      "name": "Clash Display",
+      "css-family": "Clash Display",
+      "role": "display",
+      "style": "Sharp, high-tension geometric display",
+      "why": "Instantly premium and creative for big headlines and covers.",
+      "seen-on-pinterest": "'AQ / Ardela Edge' and 'Aveton' pins",
+      "weights": "500 · 600 · 700",
+      "source": "fontshare",
+      "url": "https://www.fontshare.com/fonts/clash-display",
+      "license": "Free for commercial use — ITF Free Font License (Fontshare). Don't redistribute the files.",
+      "use": "Headlines, covers, big statements",
+      "avoid": "Body text"
+    },
+    {
+      "id": "cabinet-grotesk",
+      "name": "Cabinet Grotesk",
+      "css-family": "Cabinet Grotesk",
+      "role": "display",
+      "style": "Characterful grotesk, strong at heavy weights",
+      "why": "Personality without losing professionalism; heavy weights carry statements.",
+      "seen-on-pinterest": "'SIX SOUND', 'HOMUSH' and the 'Bold → Black' weight pins",
+      "weights": "500 · 700 · 800",
+      "source": "fontshare",
+      "url": "https://www.fontshare.com/fonts/cabinet-grotesk",
+      "license": "Free for commercial use — ITF Free Font License (Fontshare). Don't redistribute the files.",
+      "use": "Headlines, statements",
+      "avoid": "Long body text"
+    },
+    {
+      "id": "syne",
+      "name": "Syne",
+      "css-family": "Syne",
+      "role": "display",
+      "style": "Wide, artsy grotesk",
+      "why": "The most creative option — editorial and art-directed.",
+      "seen-on-pinterest": "The wide 'Bold / Ultra Bold / Heavy / Black' specimen",
+      "weights": "600 · 700 · 800",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Syne",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)",
+      "use": "Short headlines, creative covers",
+      "avoid": "Body text, long headlines"
+    },
+    {
+      "id": "unbounded",
+      "name": "Unbounded",
+      "css-family": "Unbounded",
+      "role": "display",
+      "style": "Rounded, extended geometric",
+      "why": "Bold and friendly; superb for big numbers and stats.",
+      "seen-on-pinterest": "'NURA', 'neuria' and 'Amatry' pins",
+      "weights": "500 · 700",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Unbounded",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)",
+      "use": "Big numbers, short punchy headlines",
+      "avoid": "Body text"
+    },
+    {
+      "id": "bricolage-grotesque",
+      "name": "Bricolage Grotesque",
+      "css-family": "Bricolage Grotesque",
+      "role": "display",
+      "style": "Quirky grotesk with optical sizes",
+      "why": "Human and creative; feels hand-tuned at large sizes.",
+      "seen-on-pinterest": "Creative grotesk style of 'soiren' and 'VORUE'",
+      "weights": "400 · 700",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Bricolage+Grotesque",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)",
+      "use": "Headlines with character",
+      "avoid": "Small labels"
+    },
+    {
+      "id": "archivo",
+      "name": "Archivo",
+      "css-family": "Archivo",
+      "role": "display",
+      "style": "Grotesk with width axis — condensed to expanded",
+      "why": "Condensed uppercase gives impact; expanded gives width — one family, many looks.",
+      "seen-on-pinterest": "The 'Nexora' condensed uppercase posts; 'MOVAULT' and 'NOTHING' pins",
+      "weights": "400 – 900, widths 62 – 125",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Archivo",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)",
+      "use": "Condensed uppercase headlines (2–6 words)",
+      "avoid": "Condensed body text"
+    },
+    {
+      "id": "sora",
+      "name": "Sora",
+      "css-family": "Sora",
+      "role": "display",
+      "style": "Geometric with a technical personality",
+      "why": "Modern and clean with a subtle edge; works for headlines and short copy.",
+      "seen-on-pinterest": "'soiren' and 'Qurova' pins — geometric with personality",
+      "weights": "400 · 700",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Sora",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)"
+    },
+    {
+      "id": "instrument-serif",
+      "name": "Instrument Serif",
+      "css-family": "Instrument Serif",
+      "role": "accent",
+      "style": "Elegant editorial serif, especially italic",
+      "why": "The premium editorial trick: 1–3 italic serif words inside a sans headline.",
+      "seen-on-pinterest": "Italic accent words in the editorial-grid posts; 'Aurelis' and 'Refine' pins",
+      "weights": "400 · italic",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Instrument+Serif",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)",
+      "use": "1–3 accent words, pull quotes",
+      "avoid": "Whole headlines on dark busy grounds, body text"
+    },
+    {
+      "id": "fraunces",
+      "name": "Fraunces",
+      "css-family": "Fraunces",
+      "role": "accent",
+      "style": "Soft, warm serif with optical sizes",
+      "why": "Premium but approachable; makes tips and stories feel human.",
+      "seen-on-pinterest": "'timeless Edition' and 'vogun' pins",
+      "weights": "400 · 600",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Fraunces",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)",
+      "use": "Accent words, soft headlines",
+      "avoid": "Body text"
+    },
+    {
+      "id": "playfair-display",
+      "name": "Playfair Display",
+      "css-family": "Playfair Display",
+      "role": "accent",
+      "style": "High-contrast luxury serif",
+      "why": "Classic premium contrast for quotes and testimonials.",
+      "seen-on-pinterest": "Serif headings in the career-pivot carousel; 'Calmora' and 'Praega' pins",
+      "weights": "400 · 700 · italic",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Playfair+Display",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)",
+      "use": "Quotes, testimonials, accent words",
+      "avoid": "Small text — thin hairlines disappear"
+    },
+    {
+      "id": "syncopate",
+      "name": "Syncopate",
+      "css-family": "Syncopate",
+      "role": "label",
+      "style": "Wide, uppercase-only display",
+      "why": "Luxury wide-tracked labels and small premium lines.",
+      "seen-on-pinterest": "Wide thin capitals: 'NOVELLO', 'VETRO', 'LUMEN', 'CHOPARD', 'MANSORY'",
+      "weights": "400 · 700",
+      "source": "google",
+      "url": "https://fonts.google.com/specimen/Syncopate",
+      "license": "Free for commercial use — SIL Open Font License (Google Fonts)",
+      "use": "Uppercase labels, pills, small premium lines",
+      "avoid": "Lowercase, sentences, headlines over 4 words"
+    }
+  ],
+  "pairings": [
+    {
+      "id": "signature",
+      "name": "Signature",
+      "headline": "poppins",
+      "body": "poppins",
+      "feel": "The classic Scaalus voice — friendly, clear, trustworthy."
+    },
+    {
+      "id": "clean-premium",
+      "name": "Clean premium",
+      "headline": "plus-jakarta-sans",
+      "body": "plus-jakarta-sans",
+      "feel": "Polished SaaS premium. Safe for any post."
+    },
+    {
+      "id": "creative-editorial",
+      "name": "Creative editorial",
+      "headline": "clash-display",
+      "body": "satoshi",
+      "accent": "instrument-serif",
+      "feel": "Art-directed and premium; italic serif accent on 1–3 words."
+    },
+    {
+      "id": "tech-premium",
+      "name": "Tech premium",
+      "headline": "geist",
+      "body": "geist",
+      "labels": "geist",
+      "feel": "Precise and modern; mono labels for stats and steps.",
+      "labels-variant": "Geist Mono"
+    },
+    {
+      "id": "bold-numbers",
+      "name": "Bold numbers",
+      "headline": "unbounded",
+      "body": "manrope",
+      "feel": "Big friendly numbers and stats — results posts."
+    },
+    {
+      "id": "impact",
+      "name": "Impact",
+      "headline": "archivo",
+      "body": "inter",
+      "feel": "Condensed uppercase headlines that stop the scroll.",
+      "headline-variant": "Condensed (width 62–75), uppercase"
+    },
+    {
+      "id": "soft-luxe",
+      "name": "Soft luxe",
+      "headline": "fraunces",
+      "body": "general-sans",
+      "feel": "Warm, human, premium — stories and tips."
+    },
+    {
+      "id": "artsy",
+      "name": "Artsy",
+      "headline": "syne",
+      "body": "outfit",
+      "feel": "The most creative pairing — short, bold statements."
+    },
+    {
+      "id": "grotesk-character",
+      "name": "Grotesk character",
+      "headline": "cabinet-grotesk",
+      "body": "general-sans",
+      "labels": "syncopate",
+      "feel": "Confident with personality; luxury wide labels."
+    },
+    {
+      "id": "calm-geometric",
+      "name": "Calm geometric",
+      "headline": "urbanist",
+      "body": "manrope",
+      "feel": "Airy and minimal; light-weight headlines."
+    },
+    {
+      "id": "modern-edge",
+      "name": "Modern edge",
+      "headline": "sora",
+      "body": "inter",
+      "accent": "playfair-display",
+      "feel": "Clean with a technical edge; a classic serif for quotes."
+    }
+  ],
+  "rules": [
+    {
+      "rule": "Pick one pairing per visual. Max two font families, plus an optional accent serif for 1–3 words.",
+      "why": "More families look messy, not creative."
+    },
+    {
+      "rule": "Rotate pairings like moods — don't use the same pairing on two posts in a row. Any pairing works with any colour mood.",
+      "why": "Variety keeps the feed creative while the colours keep it recognisable."
+    },
+    {
+      "rule": "Supporting text, captions and lists always use the pairing's body (workhorse) font.",
+      "why": "Display, condensed, wide and serif accent fonts lose readability at small sizes."
+    },
+    {
+      "rule": "Display fonts only at headline size. Condensed only in uppercase headlines of 2–6 words. Syncopate only for short uppercase labels.",
+      "why": "These fonts are built for size and impact, not reading."
+    },
+    {
+      "rule": "Accent serifs (Instrument Serif, Fraunces, Playfair Display) colour 1–3 words — ideally the same words that get the highlight colour.",
+      "why": "One premium contrast moment per post, not a second voice."
+    },
+    {
+      "rule": "Tighten big headlines slightly (about −1% to −3% letter-spacing); track only uppercase labels wide.",
+      "why": "Tight headlines read premium; wide lowercase looks amateur."
+    },
+    {
+      "rule": "Never use script, handwritten, distressed, novelty or decorative fonts for words.",
+      "why": "They break the minimal, professional, premium tone."
+    },
+    {
+      "rule": "Never retype the Scaalus name in any font — always use the logo files.",
+      "why": "The wordmark is part of the logo and is never redrawn."
+    },
+    {
+      "rule": "Use only fonts on this list, loaded from their official source (Google Fonts or Fontshare).",
+      "why": "All are free for commercial use; other fonts may need paid licences."
+    }
+  ]
+}

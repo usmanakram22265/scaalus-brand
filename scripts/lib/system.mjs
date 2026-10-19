@@ -261,5 +261,6 @@ export function build() {
     system,
     platforms,
     business: fs.existsSync(path.join(root, "business.json")) ? readJson("business.json") : undefined,
+    typography: fs.existsSync(path.join(root, "typography.json")) ? readJson("typography.json") : undefined,
   };
 }

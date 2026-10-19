@@ -1,4 +1,4 @@
-// Exports guidelines/index.html to guidelines/scaalus-colour-guidelines.pdf.
+// Exports guidelines/index.html to guidelines/scaalus-brand-guidelines.pdf.
 // Captures every page at 2x in headless Chrome and packs the JPEGs into a PDF —
 // pixel-identical to the browser (Chrome's vector print adds hairlines around
 // gradient text). No dependencies. Run node scripts/build.mjs first.
@@ -8,7 +8,7 @@ import path from "node:path";
 import { root } from "./lib/system.mjs";
 import { browser } from "./lib/chrome.mjs";
 
-const OUT = path.join(root, "guidelines", "scaalus-colour-guidelines.pdf");
+const OUT = path.join(root, "guidelines", "scaalus-brand-guidelines.pdf");
 const PAGE = { width: 1334, height: 834 };
 const SCALE = 2;
 
@@ -55,14 +55,22 @@ function writePdf(jpegs, file) {
 
 const b = await browser();
 try {
-  // The page loads Poppins from Google Fonts; retry until it is really there.
-  let fontOk = false;
-  for (let attempt = 1; attempt <= 3 && !fontOk; attempt++) {
+  // The page loads every shortlist font from Google Fonts / Fontshare; retry until all are really there.
+  let missing = [];
+  for (let attempt = 1; attempt <= 3; attempt++) {
     await b.open("guidelines/?export", { width: PAGE.width, height: PAGE.height, scale: SCALE });
-    fontOk = await b.evaluate(`document.fonts.load("700 40px Poppins").then(() => document.fonts.check("700 40px Poppins"))`);
-    if (!fontOk) console.log(`Poppins not loaded (attempt ${attempt}) — retrying`);
+    missing = await b.evaluate(`(async () => {
+      const names = [...new Set([...SCAALUS.typography.fonts.map((f) => f["css-family"]), "Geist Mono", "Inter Tight"])];
+      await Promise.all(names.map((n) => document.fonts.load('700 40px "' + n + '"').catch(() => null)));
+      await document.fonts.ready;
+      const loaded = new Set([...document.fonts].filter((f) => f.status === "loaded").map((f) => f.family.replace(/["']/g, "")));
+      return names.filter((n) => !loaded.has(n));
+    })()`);
+    if (!missing.length) break;
+    console.log(`Fonts not loaded (attempt ${attempt}): ${missing.join(", ")} — retrying`);
   }
-  if (!fontOk) throw new Error("Poppins did not load from Google Fonts — check the network and run again.");
+  const fontOk = missing.length === 0;
+  if (!fontOk) throw new Error(`Fonts did not load: ${missing.join(", ")} — check the network and run again.`);
   const rects = await b.evaluate(`[...document.querySelectorAll(".page")].map((p) => { const r = p.getBoundingClientRect(); return [r.left + scrollX, r.top + scrollY]; })`);
   const jpegs = [];
   for (const [x, y] of rects) jpegs.push(await b.shot({ x, y, width: PAGE.width, height: PAGE.height, format: "jpeg", quality: 90 }));

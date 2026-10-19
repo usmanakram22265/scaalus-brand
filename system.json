@@ -3,15 +3,15 @@
   "version": "3.1.0",
   "date": "2026-10-18",
   "scope": {
-    "provides": "Colour elements only: the palette, gradients, glows, the six mood colour recipes, text/background pairs, logo colour rules, the dark/light rhythm and the image colour checks.",
-    "does-not-provide": "Visual design. Layout, composition, shapes, imagery, illustration, typography, copy and format are decided fresh by whoever makes each visual — the agent, the designer or the visual tool.",
+    "provides": "Colour elements: the palette, gradients, glows, the six mood colour recipes, text/background pairs, logo colour rules, the dark/light rhythm and the image colour checks. Font elements (the shortlist, pairings and type rules) live in typography.json.",
+    "does-not-provide": "Visual design. Layout, composition, shapes, imagery, illustration, how the type is set, copy and format are decided fresh by whoever makes each visual — the agent, the designer or the visual tool.",
     "rule": "Take the elements, decide the visual yourself. Never copy a layout, shape or composition from these guidelines or from earlier posts; the colour cards in the guidelines are abstract illustrations of colour, not templates."
   },
   "principles": [
     {
       "n": 1,
       "title": "Elements, not visuals.",
-      "body": "This system gives you colours, gradients, glows and rules. How the visual looks — layout, shapes, imagery, type — is yours to decide, fresh every time."
+      "body": "This system gives you colours, gradients, glows, fonts and rules. How the visual looks — layout, shapes, imagery, how the type is set — is yours to decide, fresh every time."
     },
     {
       "n": 2,

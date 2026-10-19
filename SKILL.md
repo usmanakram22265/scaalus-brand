@@ -1,13 +1,13 @@
 ---
 name: scaalus-brand
-description: Scaalus brand system — who Scaalus serves (high-ticket US home service businesses like roofing, HVAC, plumbing, landscaping, remodeling), what it delivers and how to talk about it (always the end result, never the service), plus the exact colour palette (3 hero colours, the logo accents, 20 hex values), 6 dark/light colour moods, gradients, logo rules, contrast-checked text pairs, the one-dark-one-light rhythm and image colour checks. Elements only — every visual and every line of copy is created fresh. Use this skill whenever you write, design, prompt, review or plan ANYTHING for Scaalus or scaalus.com — Instagram, LinkedIn or Facebook posts, carousels, captions, hooks, ads, banners, AI image prompts, emails, landing copy — or when someone asks "on-brand", "our colours", "what do we offer", "write a post about missed calls", even if they never name the skill.
+description: Scaalus brand system — who Scaalus serves (high-ticket US home service businesses like roofing, HVAC, plumbing, landscaping, remodeling), what it delivers and how to talk about it (always the end result, never the service), plus the exact colour palette (3 hero colours, the logo accents, 20 hex values), 6 dark/light colour moods, gradients, logo rules, contrast-checked text pairs, the one-dark-one-light rhythm, image colour checks, and 20 shortlisted modern fonts with 11 pairings and type rules. Elements only — every visual and every line of copy is created fresh. Use this skill whenever you write, design, prompt, review or plan ANYTHING for Scaalus or scaalus.com — Instagram, LinkedIn or Facebook posts, carousels, captions, hooks, ads, banners, AI image prompts, emails, landing copy — or when someone asks "on-brand", "our colours", "what do we offer", "write a post about missed calls", even if they never name the skill.
 ---
 
 # Scaalus brand
 
 Scaalus is a done-for-you growth system for US home service businesses. Promise: *"A calendar full of booked jobs. Not a phone full of missed calls."*
 
-This skill gives two kinds of elements: **the message** (who Scaalus serves, what it delivers, the results to talk about and the rules for saying it — `business.json`) and **the colours** (palette, gradients, moods, contrast-safe text, logo rules — `dist/brand.json`). Why it matters: every post on every platform should read as one brand, speak to the owner's results, and stay readable at its worst point.
+This skill gives three kinds of elements: **the message** (who Scaalus serves, what it delivers, the results to talk about and the rules for saying it — `business.json`), **the colours** (palette, gradients, moods, contrast-safe text, logo rules — `dist/brand.json`) and **the fonts** (shortlist, pairings, type rules — `typography.json`). Why it matters: every post on every platform should read as one brand, speak to the owner's results, and stay readable at its worst point.
 
 > **Do not edit this skill's files.** This installed copy is read-only and is replaced on every update. If something looks wrong or missing, tell the user what you would change; changes are made only in the main Scaalus brand repo.
 
@@ -15,7 +15,7 @@ All paths are relative to this skill's base directory.
 
 ## Elements, not visuals
 
-This skill hands you **elements**: colours, gradients, glows, text/background pairs, logo colour rules, the dark/light rhythm and image colour checks. **The visual itself is yours to decide, fresh every time** — layout, composition, shapes, imagery, illustration, typography, copy and format come from you, the user's request or the visual tool being used.
+This skill hands you **elements**: colours, gradients, glows, text/background pairs, logo colour rules, the dark/light rhythm, image colour checks and font pairings. **The visual itself is yours to decide, fresh every time** — layout, composition, shapes, imagery, illustration, how the type is set, copy and format come from you, the user's request or the visual tool being used.
 
 - Never copy a layout, shape or composition from the guidelines PDF (its colour cards are abstract illustrations of colour, not templates) or from earlier posts.
 - Mood recipes say which colour plays which *role* (ground, colour mass, headline, highlight, pill, button…), not what the design looks like. Any design that uses the right colours in the right roles is on-brand.
@@ -51,17 +51,43 @@ Rules for copy (full list with reasons in `business.json` → `messaging-rules`)
 | File | Use it for |
 |---|---|
 | `business.json` | The message: company, audience and pains, every service → result, outcomes, messaging rules, voice. Also included in `dist/brand.json` as `business`. |
+| `typography.json` | The fonts: shortlist with roles, sources and licences, pairings, type rules and ready `embed` URLs. Also included in `dist/brand.json` as `typography`. |
 | `dist/brand.json` | Read first for colours. Everything resolved to hex: `palette`, `gradients` (with ready `css`), `moods` (complete colour recipes + verified `contrast` rows), `system` (heroes, rhythm, rules, logo files, image-check thresholds), `platforms`. |
 | `dist/tokens.css` | Building in HTML/CSS: put `data-mood="<id>"` on an element and use `var(--sc-ground)`, `var(--sc-mass)`, `var(--sc-headline)`, `var(--sc-supporting)`, `var(--sc-highlight)`, `var(--sc-pill-bg)`, `var(--sc-button-bg)`, `var(--sc-accent-bar)`… plus `var(--sc-color-<id>)` for any palette colour. |
 | `image-prompts.md` | Writing a prompt for an image model: paste the mood's colour block. |
 | `platforms/<name>.json` | Gradient angle per format and calm zones for Instagram, LinkedIn, Facebook. |
-| `guidelines/scaalus-colour-guidelines.pdf` | Showing a human the system (28 pages; in the repo, not in the chat package). Use `dist/brand.json` for values. |
+| `guidelines/scaalus-brand-guidelines.pdf` | Showing a human the system (35 pages: colour, logo and typography; in the repo, not in the chat package). Use `dist/brand.json` for values. |
 
 ## The palette in one look
 
 - **Heroes** — do most of the work: **Navy `#0D2847`** (dark, headline ink), **Scaalus Blue `#2457D6`** (action), **Mist `#F1F5FF`** (light).
 - **Signature** — the logo gradient **Logo Blue `#4B78EB` → Logo Indigo `#574EDA` → Logo Violet `#582AC2`**, used small: the accent bar, a highlight end, the logo. Indigo and violet are accents only.
 - **Support** — blues: Navy Royal `#21387B`, Royal Blue `#123499`, Cobalt `#1D46BA`, Electric `#0033FF` (inside colour masses only), Periwinkle `#91AEFD`, Ice `#BED0FE`; darks: Deep Royal `#0A2472`, Night Blue `#06174A`, Abyss `#040A26`; lights: White `#FFFFFF`, Cloud `#DEE8FF`; ink: Slate Blue `#3A4566`, Haze `#BFCCF0`, Fog `#8E9BC4`.
+
+## Fonts — pick a pairing
+
+`typography.json` (also in `dist/brand.json` as `typography`) holds **20 free fonts**, picked by eye from premium brand work for a modern, minimal, creative and professional look, and **11 pairings**. Fonts are elements too: choose the pairing; how you set the type is yours.
+
+| Pairing | Headline | Body | Extra | Feel |
+|---|---|---|---|---|
+| `signature` (default) | Poppins | Poppins | — | The classic Scaalus voice — friendly, clear, trustworthy. |
+| `clean-premium` | Plus Jakarta Sans | Plus Jakarta Sans | — | Polished SaaS premium. Safe for any post. |
+| `creative-editorial` | Clash Display | Satoshi | accent Instrument Serif | Art-directed and premium; italic serif accent on 1–3 words. |
+| `tech-premium` | Geist | Geist | labels Geist Mono | Precise and modern; mono labels for stats and steps. |
+| `bold-numbers` | Unbounded | Manrope | — | Big friendly numbers and stats — results posts. |
+| `impact` | Archivo condensed | Inter | — | Condensed uppercase headlines that stop the scroll. |
+| `soft-luxe` | Fraunces | General Sans | — | Warm, human, premium — stories and tips. |
+| `artsy` | Syne | Outfit | — | The most creative pairing — short, bold statements. |
+| `grotesk-character` | Cabinet Grotesk | General Sans | labels Syncopate | Confident with personality; luxury wide labels. |
+| `calm-geometric` | Urbanist | Manrope | — | Airy and minimal; light-weight headlines. |
+| `modern-edge` | Sora | Inter | accent Playfair Display | Clean with a technical edge; a classic serif for quotes. |
+
+- **Roles:** *workhorse* fonts carry headlines and all body text; *display* fonts only big headlines, numbers and covers; *accent* serifs only 1–3 highlight words or a quote; *label* (Syncopate) only short uppercase labels.
+- **One pairing per visual**, max two families plus an optional accent serif on the same 1–3 words that get the highlight colour.
+- **Rotate pairings like moods**, never the same pairing twice in a row. Any pairing works with any mood.
+- Supporting text, captions and lists always use the pairing's body font. Condensed Archivo only for 2–6-word uppercase headlines. Tighten big headlines (about −1% to −3%); track only uppercase labels.
+- **Never** script, handwritten, distressed or novelty fonts, and never retype "scaalus" in any font — use the logo files.
+- **Only listed fonts**, from Google Fonts or Fontshare (all free for commercial use). In HTML/CSS, `<link>` the two URLs in `typography.json` → `embed` and use each font's `css-family`. Link Fontshare fonts; never bundle or send their files. If a tool can't load a font, use its `style` description instead (e.g. "sharp geometric display sans").
 
 ## Step 1 — dark or light, then the mood
 
@@ -117,7 +143,7 @@ Checks luminance (light stays light, dark has a glow), that blue leads (≥ 60% 
 
 ## Changing the system
 
-Only when asked. Edit sources (`tokens/palette.json`, `tokens/gradients.json`, `moods/*.json`, `system.json`, `platforms/*.json`) — never `dist/` — then run from the base directory:
+Only when asked. Edit sources (`tokens/palette.json`, `tokens/gradients.json`, `moods/*.json`, `system.json`, `platforms/*.json`, `typography.json`, `business.json`) — never `dist/` — then run from the base directory:
 
 ```bash
 node scripts/build.mjs              # rebuild dist/

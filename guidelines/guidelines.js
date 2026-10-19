@@ -1,4 +1,4 @@
-// Renders the Scaalus colour guidelines from window.SCAALUS (dist/brand.js).
+// Renders the Scaalus brand guidelines from window.SCAALUS (dist/brand.js).
 // Every colour, gradient, rule and contrast figure comes from the token build;
 // this file only holds page layout.
 (() => {
@@ -79,8 +79,8 @@
       <div class="cover__aura"></div>
       <img class="cover__logo" src="${logoSrc("dark")}" alt="Scaalus">
       <div class="cover__bar"></div>
-      <h1 class="cover__title">Colour<br><span class="hl">Guidelines</span></h1>
-      <p class="cover__meta">Social media · colour system v${esc(D.version)} · three heroes, two themes, six moods · ${monthYear}</p>
+      <h1 class="cover__title">Brand<br><span class="hl">Guidelines</span></h1>
+      <p class="cover__meta">Social media · colour system v${esc(D.version)}${D.typography ? ` · typography v${esc(D.typography.version)}` : ""} · three heroes, two themes, six moods${D.typography ? `, ${D.typography.fonts.length} fonts` : ""} · ${monthYear}</p>
     </section>`;
   }
 
@@ -89,6 +89,7 @@
       ["01", "Overall colour", "Principles · hero colours · palette · gradients · themes and moods · rhythm · proportions · contrast · logo", "overall"],
       ["02", "Dark theme", `Overview · ${byTheme("dark").map((m) => m.name).join(" · ")} · surfaces · text and contrast · glows and checks · rules`, "dark"],
       ["03", "Light theme", `Overview · ${byTheme("light").map((m) => m.name).join(" · ")} · surfaces · text and contrast · glows and checks · rules`, "light"],
+      ...(D.typography ? [["04", "Typography", "Font roles · workhorse fonts · display fonts · accent and label fonts · pairings · type rules", "type"]] : []),
     ];
     return page("light", {
       eyebrow: "Contents",
@@ -367,14 +368,162 @@
     return `<section class="page cover" data-mood="midnight">
       <div class="cover__aura" style="background:var(--sc-mass);-webkit-mask-image:none;mask-image:none;opacity:1"></div>
       <h1 class="cover__title" style="inset-block-start:300px;font-size:76px">A calendar full of booked jobs.<br><span class="hl">Always on brand.</span></h1>
-      <p class="cover__meta" style="inset-block-start:500px">scaalus.com · colour system v${esc(D.version)} · ${monthYear}</p>
+      <p class="cover__meta" style="inset-block-start:500px">scaalus.com · colour system v${esc(D.version)}${D.typography ? ` · typography v${esc(D.typography.version)}` : ""} · ${monthYear}</p>
       <img src="${logoSrc("dark")}" alt="Scaalus" style="position:absolute;inset-inline-start:80px;inset-block-end:64px;block-size:40px">
     </section>`;
   }
 
+  // ---------- 04 typography ----------
+
+  const TY = D.typography;
+  const TYPE = "04 · Typography";
+  const F = Object.fromEntries(TY.fonts.map((f) => [f.id, f]));
+  const byRole = (r) => TY.fonts.filter((f) => f.role === r);
+  const fam = (name) => `font-family:'${name}', sans-serif`;
+  const ff = (id) => fam(F[id]["css-family"]);
+  const sourceName = { google: "Google Fonts", fontshare: "Fontshare" };
+  // Specimen words only — real copy is always written fresh from business.json.
+  const SAMPLE = {
+    poppins: "Every call answered.",
+    "plus-jakarta-sans": "No lead goes cold.",
+    "general-sans": "A calendar full of jobs.",
+    satoshi: "Found first on Google.",
+    manrope: "Jobs land in your calendar.",
+    outfit: "Booked jobs, not missed calls.",
+    urbanist: "Your phone still gets answered.",
+    geist: "Every lead, in one place.",
+    inter: "Every lead, followed up.",
+    "clash-display": 'Booked <span class="hl">solid.</span>',
+    "cabinet-grotesk": 'Every call <span class="hl">answered.</span>',
+    syne: 'Found <span class="hl">first.</span>',
+    unbounded: '<span class="hl">24/7</span>',
+    "bricolage-grotesque": 'Your calendar, <span class="hl">full.</span>',
+    archivo: 'NO LEAD GOES <span class="hl">COLD</span>',
+    sora: 'Jobs, not <span class="hl">missed calls.</span>',
+  };
+  const BODY = "Every lead followed up until they book.";
+  const TUNE = { archivo: ";font-stretch:62.5%;text-transform:uppercase;word-spacing:0.12em", "clash-display": ";letter-spacing:0;word-spacing:0.1em" };
+  const variant = (id) => TUNE[id] || "";
+  const serif = (id, text, italic = true) => `<span class="hl tserif" style="${ff(id)};font-style:${italic ? "italic" : "normal"}">${text}</span>`;
+
+  function typeOverview() {
+    const col = (r) => `<div><div class="trole__h">${r}</div><div class="trole__d">${esc(TY.roles[r])}</div>
+      <div class="trole__list">${byRole(r).map((f) => `<div class="trole__font" style="${ff(f.id)}${variant(f.id)}">${f.name}</div>`).join("")}</div></div>`;
+    return page("dark", {
+      section: "type",
+      mood: "electric",
+      eyebrow: TYPE,
+      title: `Modern, minimal, <span class="hl tserif" style="${ff("instrument-serif")};font-style:italic;font-weight:400">creative.</span>`,
+      sub: `${TY.fonts.length} free fonts, picked by eye from what premium brands use on Pinterest, and ${TY.pairings.length} ready pairings. Fonts are elements too: pick a pairing, then design the visual fresh.`,
+      body: `<div class="troles">${["workhorse", "display", "accent", "label"].map(col).join("")}</div>
+        <p class="small tnote">Default pairing: ${TY.pairings.find((p) => p.id === TY["default-pairing"]).name} (Poppins). All fonts are free for commercial use: Google Fonts (Open Font License) and Fontshare (ITF Free Font License). Load them from the official source; never send the font files around.</p>`,
+    });
+  }
+
+  function workhorseFonts() {
+    const cardOf = (f) => `<div class="fcard"><div class="fcard__aa" style="${ff(f.id)}">Aa</div>
+      <div><div class="fcard__name" style="${ff(f.id)}">${f.name}</div><div class="fcard__style">${esc(f.style)}</div></div>
+      <div class="fcard__head" style="${f.id === "inter" ? fam("Inter Tight") : ff(f.id)}">${SAMPLE[f.id]}</div>
+      <div class="fcard__body" style="${ff(f.id)}">${BODY}</div>
+      <div class="fcard__meta">${sourceName[f.source]} · ${esc(f.weights)} · ${esc(f["seen-on-pinterest"])}</div></div>`;
+    return page("light", {
+      eyebrow: TYPE,
+      title: "Workhorse fonts",
+      sub: esc(TY.roles.workhorse) + " Any of these can carry a whole post.",
+      body: `<div class="fgrid">${byRole("workhorse").map(cardOf).join("")}</div>`,
+    });
+  }
+
+  function displayFonts() {
+    const list = byRole("display");
+    const cardOf = (f, i) => `<div class="dcard${i < 3 ? " dcard--wide" : ""}">
+      <div class="dcard__sample" style="${ff(f.id)}${variant(f.id)}${f.id === "unbounded" ? ";font-size:72px" : ""}">${SAMPLE[f.id]}</div>
+      <div class="dcard__name">${f.name}</div><div class="dcard__d">${esc(f.style)} · ${esc(f.weights)} · ${sourceName[f.source]}</div>
+      <div class="dcard__use">${f.use ? `Use: ${esc(f.use)}` : esc(f.why)}${f.avoid ? ` · Avoid: ${esc(f.avoid)}` : ""}</div></div>`;
+    return page("dark", {
+      eyebrow: TYPE,
+      title: "Display fonts",
+      sub: esc(TY.roles.display) + " Pair each with a workhorse font for the rest of the post.",
+      body: `<div class="dgrid">${list.map(cardOf).join("")}</div>`,
+    });
+  }
+
+  function accentFonts() {
+    const spec = {
+      "instrument-serif": `<div class="acard__sample" style="${ff("clash-display")};font-weight:600${variant("clash-display")}">A calendar full of ${serif("instrument-serif", "booked jobs.")}</div>`,
+      fraunces: `<div class="acard__sample" style="${ff("fraunces")};font-weight:600">Time back for <span class="hl">your crew.</span></div>`,
+      "playfair-display": `<div class="acard__sample" style="${ff("sora")};font-weight:700">Found ${serif("playfair-display", "first")} on Google.</div>`,
+      syncopate: `<div class="acard__sample"><div class="tlabel" style="${ff("syncopate")};font-size:20px;color:var(--sc-headline)">Booked jobs</div><div class="tlabel" style="${ff("syncopate")};font-size:13px;margin-block-start:14px">14-day free trial · No contract</div></div>`,
+    };
+    const cardOf = (f) => `<div class="acard">${spec[f.id]}
+      <div class="dcard__name">${f.name} <span class="acard__role">${f.role}</span></div><div class="dcard__d">${esc(f.style)} · ${esc(f.weights)} · ${sourceName[f.source]}</div>
+      <div class="dcard__use">Use: ${esc(f.use)} · Avoid: ${esc(f.avoid)}</div></div>`;
+    return page("light", {
+      eyebrow: TYPE,
+      title: "Accent and label fonts",
+      sub: `${esc(TY.roles.accent)} ${esc(TY.roles.label)}`,
+      body: `<div class="agrid">${[...byRole("accent"), ...byRole("label")].map(cardOf).join("")}</div>`,
+    });
+  }
+
+  const PAIR_HEAD = {
+    signature: 'Every call <span class="hl">answered.</span>',
+    "clean-premium": 'No lead goes <span class="hl">cold.</span>',
+    "creative-editorial": "A calendar full of {booked jobs.}",
+    "tech-premium": 'Found first <span class="hl">on Google.</span>',
+    "bold-numbers": 'Answered <span class="hl">24/7.</span>',
+    impact: 'STOP LOSING <span class="hl">JOBS</span>',
+    "soft-luxe": 'Time back for <span class="hl">your crew.</span>',
+    artsy: 'Booked <span class="hl">solid.</span>',
+    "grotesk-character": 'Your next job is <span class="hl">calling.</span>',
+    "calm-geometric": 'A calendar that <span class="hl">fills itself.</span>',
+    "modern-edge": "Your phone, {always answered.}",
+  };
+
+  function pairTile(p, i) {
+    const m = D.moods[R.sequence[i % R.sequence.length]];
+    const head = PAIR_HEAD[p.id].replace(/\{(.+?)\}/, (_, w) => serif(p.accent, w));
+    const labelFam = p["labels-variant"] ? fam(p["labels-variant"]) : ff(p.labels || p.body);
+    const label = D.business.audience.industries[i % 6];
+    const result = D.business.offer.services[i % D.business.offer.services.length].result;
+    const fonts = [`${F[p.headline].name}${p["headline-variant"] ? " condensed" : ""}`, p.body !== p.headline ? F[p.body].name : "", p.accent ? `accent ${F[p.accent].name}` : "", p.labels ? `labels ${p["labels-variant"] || F[p.labels].name}` : ""].filter(Boolean).join(" + ");
+    return `<div><div class="ptile" data-mood="${m.id}">
+        <div class="tlabel ptile__label" style="${labelFam}">${esc(label)}</div><div class="ptile__mood">${m.name}</div>
+        <div class="ptile__head" style="${ff(p.headline)}${variant(p.headline)}${p.headline === "urbanist" ? ";font-weight:500" : ""}">${head}</div>
+        <div class="ptile__body" style="${ff(p.body)}">${esc(result)}</div></div>
+      <div class="pcap__name">${p.name}${p.id === TY["default-pairing"] ? ' <span class="acard__role">default</span>' : ""}</div><div class="pcap__fonts">${fonts}</div><div class="pcap__feel">${esc(p.feel)}</div></div>`;
+  }
+
+  function pairings(part) {
+    const list = TY.pairings.slice(part * 6, part * 6 + 6);
+    const note = list.length < 6 ? `<div class="pnote"><div class="pnote__h">Any pairing, any mood</div><p>${esc(TY.rules[1].rule)}</p><p>${esc(TY.rules[0].rule)}</p></div>` : "";
+    return page("light", {
+      eyebrow: TYPE,
+      title: `Pairings${part ? " (continued)" : ""}`,
+      sub: part ? "Shown on rotating moods — fonts and colours are chosen separately." : "Ready font pairs. Specimens on rotating moods, not layouts — design every visual fresh.",
+      body: `<div class="pgrid">${list.map((p, i) => pairTile(p, part * 6 + i)).join("")}${note}</div>`,
+    });
+  }
+
+  function typeRules() {
+    const tag = (t) => `<div class="tspec__tag">${t}</div>`;
+    return page("light", {
+      eyebrow: TYPE,
+      title: "Type rules",
+      body: `<div class="trules"><div class="tspec" data-mood="electric">
+          <div class="tlabel" style="${ff("syncopate")};font-size:12px">Roofing · HVAC · Plumbing</div>${tag("Label · Syncopate or mono · uppercase, tracked wide")}
+          <div class="tspec__head" style="${ff("clash-display")}${variant("clash-display")}">Never lose a job to a <br>${serif("instrument-serif", "missed call.")}</div>${tag("Headline · display font · −2% letter-spacing")}${tag("Accent serif · 1–3 words · same words as the highlight")}
+          <div class="tspec__body" style="${ff("satoshi")}">Every missed call gets a text back in seconds, so the job stays yours.</div>${tag("Supporting · always the workhorse font")}
+        </div>
+        <div class="trule-list">${TY.rules.map((r, i) => `<div class="trule"><div class="trule__n hl">${two(i + 1)}</div><div><div class="trule__t">${esc(r.rule)}</div><div class="trule__w">${esc(r.why)}</div></div></div>`).join("")}</div></div>`,
+    });
+  }
+
+  const typography = () => (TY ? [typeOverview(), workhorseFonts(), displayFonts(), accentFonts(), pairings(0), pairings(1), typeRules()] : []);
+
   const theme = (t) => [overview(t), ...byTheme(t).map(moodPage), surfaces(t), textContrast(t), glowsAndChecks(t), doDont(t)];
 
-  const html = [cover(), contents(), principles(), heroes(), palette(), gradients(), themesAndMoods(), rhythm(), proportions(), contrastGlance(), logoPage(), ...theme("dark"), ...theme("light"), closing()]
+  const html = [cover(), contents(), principles(), heroes(), palette(), gradients(), themesAndMoods(), rhythm(), proportions(), contrastGlance(), logoPage(), ...theme("dark"), ...theme("light"), ...typography(), closing()]
     .join("")
     .replace(/\{\{(\w+)\}\}/g, (_, k) => two(starts[k]));
 
