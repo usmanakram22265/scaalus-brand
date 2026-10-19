@@ -42,7 +42,9 @@ This skill hands you **elements**: colours, gradients, glows, text/background pa
 | Reactivation campaigns | Past customers come back for their next job |
 | Review requests | More 5-star reviews, on autopilot |
 
-Rules for copy (full list with reasons in `business.json` → `messaging-rules`): speak the owner's language (jobs, calls, calendar, reviews, Google — no tech jargon); make the cost of a lost job felt; one message per post, headline under ~10 words; **never invent numbers, stats, testimonials or client names** — real figures or a clear placeholder like [X jobs]; end on scaalus.com or a clear next step. Voice: simple, clear, confident, results-first. Pricing and trial terms are unconfirmed — don't state them unless the user gives them.
+Rules for copy (full list with reasons in `business.json` → `messaging-rules`): speak the owner's language (jobs, calls, calendar, reviews, Google — no tech jargon); make the cost of a lost job felt; one message per post, headline under ~10 words; **never invent numbers, stats, testimonials or client names** — real figures or a clear placeholder like [X jobs]; end on scaalus.com or a clear next step. Voice: simple, clear, confident, results-first.
+
+**Pricing** (`business.json` → `pricing`): **$297/month, 14-day free trial, no contract.** Mention the free trial and no contract freely (CTAs, captions, a carousel's last slide). Show the **$297 price sparingly** — only on offer or pricing posts, or when the user asks; never as the default headline. Never invent discounts or other trial lengths.
 
 ## Files
 

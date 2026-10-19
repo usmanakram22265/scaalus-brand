@@ -3984,7 +3984,7 @@
   },
   "business": {
     "$description": "Scaalus business and messaging source of truth. Who Scaalus serves, what it delivers, and how to talk about it. Copy is always written fresh — this file gives the facts, the results and the rules, not finished posts.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "company": {
       "name": "Scaalus",
       "website": "scaalus.com",
@@ -4116,6 +4116,16 @@
         "Revenue protected on every high-ticket lead"
       ]
     },
+    "pricing": {
+      "price": "$297 per month",
+      "trial": "14-day free trial",
+      "contract": "No contract — cancel anytime",
+      "usage": {
+        "trial-and-no-contract": "Fine to use often: in calls to action, captions and the last carousel slide (\"Start your 14-day free trial\", \"No contract. Cancel anytime.\").",
+        "price": "Use sparingly. Show $297/month only where price is the point — an offer or pricing post, an ad that needs it, or when the user asks. Never make it the default headline or put it on every post; lead with the result instead.",
+        "never": "Never invent discounts, promo prices, setup fees or different trial lengths."
+      }
+    },
     "messaging-rules": [
       {
         "rule": "Lead with the result, not the service.",
@@ -4140,6 +4150,10 @@
       {
         "rule": "One message per post, headline under 10 words when possible.",
         "why": "Owners read posts in seconds between jobs."
+      },
+      {
+        "rule": "Keep the price in the background. Mention the 14-day free trial and no contract freely; show $297/month only on offer or pricing posts.",
+        "why": "The result sells the call; the price is a detail for owners who are already interested."
       },
       {
         "rule": "Never invent numbers, stats, testimonials or client names. Use real figures only, or a clear placeholder like [X jobs].",
@@ -4179,9 +4193,6 @@
         "growth hacking",
         "synergy"
       ]
-    },
-    "open-questions": [
-      "Pricing and trial terms: the v1.0 guidelines showed sample copy ($297 / month, 7-day free trial, no contract). Confirm before using them as facts."
-    ]
+    }
   }
 }
