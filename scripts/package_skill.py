@@ -1,10 +1,13 @@
-"""Package this repo as a .skill file for Claude chat (claude.ai / Cowork):
-python3 scripts/package_skill.py  →  dist/scaalus-brand.skill
+"""Package this repo as a .skill file for Claude chat (claude.ai / Cowork).
 
-Only what an agent needs goes in: the skill, tokens, moods, rules, logos and the
-colour scripts. The guidelines PDF, original logo files and dev tooling stay out.
+python3 scripts/package_skill.py          →  dist/scaalus-brand.skill       (slim: what an agent needs)
+python3 scripts/package_skill.py --full   →  dist/scaalus-brand-full.skill  (the complete repo)
+
+Slim leaves out the guidelines PDF, original logo files and dev tooling. Full includes
+everything except git internals, local editor config and the packages themselves.
 (Claude Code uses the repo directly via ~/.claude/skills/scaalus-brand.)
 """
+import sys
 import zipfile
 from pathlib import Path
 
@@ -21,9 +24,22 @@ INCLUDE = [
     "scripts/lib/system.mjs", "scripts/lib/color.mjs",
 ]
 SKIP = {".DS_Store"}
+FULL_SKIP_DIRS = {".git", ".claude", "__pycache__", "node_modules"}
+FULL = "--full" in sys.argv
+if FULL:
+    OUT = ROOT / "dist" / f"{NAME}-full.skill"
 
 
 def files():
+    if FULL:
+        for p in sorted(ROOT.rglob("*")):
+            rel = p.relative_to(ROOT)
+            if not p.is_file() or p.name in SKIP or p.suffix == ".skill" or p.suffix == ".pyc":
+                continue
+            if any(part in FULL_SKIP_DIRS for part in rel.parts):
+                continue
+            yield p
+        return
     for item in INCLUDE:
         path = ROOT / item
         if path.is_dir():

@@ -15,7 +15,7 @@ git clone https://github.com/usmanakram22265/scaalus-brand.git ~/.claude/skills/
 
 To update later: `git -C ~/.claude/skills/scaalus-brand pull`
 
-**Claude chat (claude.ai):** download [`dist/scaalus-brand.skill`](dist/scaalus-brand.skill) and upload it in Claude's skills settings.
+**Claude chat (claude.ai):** download [`dist/scaalus-brand.skill`](dist/scaalus-brand.skill) (slim, 1 MB) and upload it in Claude's skills settings. For the complete repo (PDF, guidelines page, all scripts and logo originals), run `python3 scripts/package_skill.py --full` and upload `dist/scaalus-brand-full.skill` (about 14 MB) instead.
 
 Once installed, ask for anything Scaalus-coloured ("make an Insta post about missed calls", "is this on brand?") and Claude loads the skill automatically.
 
