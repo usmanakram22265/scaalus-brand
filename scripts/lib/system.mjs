@@ -10,8 +10,7 @@ export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "
 
 const readJson = (rel) => JSON.parse(fs.readFileSync(path.join(root, rel), "utf8"));
 const listJson = (dir) =>
-  fs
-    .readdirSync(path.join(root, dir))
+  (fs.existsSync(path.join(root, dir)) ? fs.readdirSync(path.join(root, dir)) : [])
     .filter((f) => f.endsWith(".json"))
     .sort()
     .map((f) => readJson(path.join(dir, f)));
@@ -261,5 +260,6 @@ export function build() {
     moods,
     system,
     platforms,
+    business: fs.existsSync(path.join(root, "business.json")) ? readJson("business.json") : undefined,
   };
 }

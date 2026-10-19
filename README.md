@@ -1,19 +1,19 @@
-# Scaalus colour system
+# Scaalus brand system
 
-The colour source of truth for every Scaalus visual: social posts on Instagram, LinkedIn and Facebook, ads, banners and image prompts. **Elements only, not visuals.** This repo supplies colours, gradients, glows, mood colour recipes, contrast-checked text pairs, logo colour rules and image checks. The visual itself (layout, composition, shapes, imagery, typography, copy) is decided fresh by whoever makes it: an agent, a designer or a visual tool. Never copy a layout from the guidelines or from earlier posts. The colour cards in the PDF are abstract colour illustrations, not templates.
+The source of truth for every Scaalus post, ad, banner and image prompt: **the message** (who Scaalus serves, what it delivers and how to say it, always the result, never the service) in [`business.json`](business.json), and **the colours** in [`dist/brand.json`](dist/brand.json). **Elements only, not visuals.** This repo supplies the message, colours, gradients, glows, mood colour recipes, contrast-checked text pairs, logo colour rules and image checks. The visual itself (layout, composition, shapes, imagery, typography, copy) is decided fresh by whoever makes it: an agent, a designer or a visual tool. Never copy a layout from the guidelines or from earlier posts. The colour cards in the PDF are abstract colour illustrations, not templates.
 
-- **Agents:** this repo is the Claude skill `scaalus-brand`. Start with [`SKILL.md`](SKILL.md), then read [`dist/brand.json`](dist/brand.json). It's installed for Claude Code via the link `~/.claude/skills/scaalus-brand` → this folder.
+- **Agents:** this repo is the Claude skill `scaalus-brand`. Start with [`SKILL.md`](SKILL.md), then read [`dist/brand.json`](dist/brand.json). This folder is the **main** version; the installed skill is a separate read-only copy, so other sessions can't change the main project.
 - **People:** open [`guidelines/scaalus-colour-guidelines.pdf`](guidelines/scaalus-colour-guidelines.pdf) (28 pages), or the live version at `guidelines/index.html` (`node scripts/serve.mjs`).
 
 ## Install the skill
 
-**Claude Code** (any project on this machine):
+**Claude Code** (any computer). This installs a separate, read-only copy and updates it when you run it again:
 
 ```bash
-git clone https://github.com/usmanakram22265/scaalus-brand.git ~/.claude/skills/scaalus-brand
+curl -fsSL https://raw.githubusercontent.com/usmanakram22265/scaalus-brand/main/scripts/install_skill.sh | bash
 ```
 
-To update later: `git -C ~/.claude/skills/scaalus-brand pull`
+Never link the installed skill to the main repo: a link lets every Claude session that uses the skill edit the main project.
 
 **Claude chat (claude.ai):** download [`dist/scaalus-brand.skill`](dist/scaalus-brand.skill) (slim, 1 MB) and upload it in Claude's skills settings. For the complete repo (PDF, guidelines page, all scripts and logo originals), run `python3 scripts/package_skill.py --full` and upload `dist/scaalus-brand-full.skill` (about 14 MB) instead.
 
@@ -50,7 +50,8 @@ Every text colour in every mood passes WCAG AA, measured at the worst point of i
 ## Repo map
 
 ```
-SKILL.md                  the skill: palette, rhythm, mood recipe, rules (agent entry point)
+SKILL.md                  the skill: message, palette, rhythm, mood recipe, rules (agent entry point)
+business.json             who we serve, services → results, messaging rules, voice
 AGENTS.md                 pointer to SKILL.md for non-Claude agents
 dist/brand.json           everything resolved to hex (generated, the file agents read)
 dist/tokens.css           CSS variables, one [data-mood] block per mood (generated)
@@ -64,7 +65,7 @@ image-prompts.md          colour wording for AI image prompts, per mood
 MIGRATION.md              v1 → v3
 assets/logos/             icon-left lockup, icon, avatars, banners (+ _source originals)
 guidelines/               the guidelines page and its PDF export
-scripts/                  build, contrast check, PDF export, preview server, logo tiles, image check
+scripts/                  build, contrast check, PDF export, preview server, logo tiles, image check, skill install
 ```
 
 ## Changing a colour

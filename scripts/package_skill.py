@@ -16,7 +16,7 @@ NAME = "scaalus-brand"
 OUT = ROOT / "dist" / f"{NAME}.skill"
 
 INCLUDE = [
-    "SKILL.md", "AGENTS.md", "README.md", "MIGRATION.md", "image-prompts.md", "system.json", "package.json",
+    "SKILL.md", "AGENTS.md", "README.md", "MIGRATION.md", "image-prompts.md", "system.json", "business.json", "package.json",
     "dist/brand.json", "dist/tokens.css",
     "tokens", "moods", "platforms",
     "assets/logos/icon", "assets/logos/icon-left", "assets/logos/avatars", "assets/logos/banners",

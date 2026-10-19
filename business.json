@@ -1,0 +1,77 @@
+{
+  "$description": "Scaalus business and messaging source of truth. Who Scaalus serves, what it delivers, and how to talk about it. Copy is always written fresh — this file gives the facts, the results and the rules, not finished posts.",
+  "version": "1.0.0",
+
+  "company": {
+    "name": "Scaalus",
+    "website": "scaalus.com",
+    "one-liner": "A done-for-you growth system that gets high-ticket home service businesses found, answers and follows up every lead, and turns them into booked jobs — while the owner stays on the job.",
+    "promise": "A calendar full of booked jobs. Not a phone full of missed calls.",
+    "positioning": "Scaalus is its own complete system for home service owners: one setup that brings customers in, catches every lead and books the job. It is never presented as a reseller, a white-label product or a bundle of other companies' tools."
+  },
+
+  "audience": {
+    "who": "US home service business owners whose jobs are high-ticket — where losing a single customer costs them thousands.",
+    "industries": ["Roofing", "HVAC", "Plumbing", "Landscaping", "Remodeling", "Electrical", "General contractors", "Other high-ticket trades"],
+    "why-it-matters": "One missed call or one slow reply can mean a lost roof replacement, HVAC install or remodel — often worth thousands. These owners are on job sites, not at a desk, so leads slip through every day.",
+    "pains": [
+      "Missing calls while on a roof, in an attic or driving between jobs",
+      "Leads going cold because nobody followed up fast enough",
+      "Competitors answering first and taking the job",
+      "Hard to find on Google when homeowners search for a local pro",
+      "No time for marketing, websites or reviews",
+      "Quiet weeks with gaps in the calendar",
+      "Past customers never hearing from them again"
+    ],
+    "they-understand": "Jobs, calls, customers, homeowners, the calendar, reviews, Google, revenue, their crew, their time.",
+    "they-do-not-care-about": "Software names, CRMs, automations, workflows, integrations, AI models or any technical how-it-works."
+  },
+
+  "offer": {
+    "$description": "Every Scaalus service and the result a post should say instead. Posts lead with the result; the service is internal language.",
+    "services": [
+      { "id": "website", "service": "A website built to book jobs and rank locally", "result": "A website that turns visitors into booked jobs — day and night.", "examples": ["Your website should book jobs, not just look nice.", "Homeowners land on your site and book on the spot."] },
+      { "id": "local-seo", "service": "Google Business Profile optimisation and local SEO", "result": "Show up first when homeowners search for your service nearby.", "examples": ["Be the first roofer they see on Google.", "More calls from Google — without paying for every click."] },
+      { "id": "missed-call-text-back", "service": "Automatic text back on missed calls", "result": "Every missed call gets a text back in seconds, so the job stays yours.", "examples": ["Missed a call on the roof? They already got a text from you.", "Every missed call is a job for your competitor — unless you answer it first."] },
+      { "id": "ai-calling", "service": "AI calling agent that answers and qualifies calls", "result": "Every call answered, 24/7 — even when you're on a job site.", "examples": ["You're on a roof. Your phone still gets answered.", "No more voicemail. Every caller gets an answer and a booking."] },
+      { "id": "ai-chat", "service": "AI chatbot on the website and social messages", "result": "Questions answered and appointments booked, even at 2 a.m.", "examples": ["Homeowners book while you sleep."] },
+      { "id": "sms-follow-up", "service": "Automated SMS follow-up", "result": "Every lead followed up until they book — no lead goes cold.", "examples": ["Most jobs are lost to slow follow-up. Yours won't be."] },
+      { "id": "calendar-booking", "service": "Automatic calendar booking", "result": "Jobs land straight in your calendar — no phone tag.", "examples": ["A calendar that fills itself."] },
+      { "id": "app", "service": "A dedicated app for the owner", "result": "Every lead, call and message in one place on your phone.", "examples": ["Your whole pipeline in your pocket."] },
+      { "id": "reactivation", "service": "Reactivation campaigns to past customers", "result": "Past customers come back for their next job.", "examples": ["Your best next job is a customer you already have."] },
+      { "id": "reviews", "service": "Review requests after every job", "result": "More 5-star reviews, on autopilot — and more trust before the first call.", "examples": ["Every finished job asks for a 5-star review."] }
+    ],
+    "outcomes": [
+      "More booked jobs",
+      "A full calendar, even in slow weeks",
+      "Never losing a job to a missed call",
+      "Found first on Google",
+      "More 5-star reviews",
+      "Repeat jobs from past customers",
+      "Time back for the owner",
+      "Revenue protected on every high-ticket lead"
+    ]
+  },
+
+  "messaging-rules": [
+    { "rule": "Lead with the result, not the service.", "why": "Owners scroll past features they don't understand. They stop for results they want: booked jobs, a full calendar, no missed calls." },
+    { "rule": "Translate every service into an owner outcome using offer.services[].result.", "why": "'SMS automation' means nothing to a roofer; 'every lead followed up until they book' does." },
+    { "rule": "Speak the owner's language: jobs, calls, customers, calendar, reviews, Google, crew.", "why": "No tech jargon — talk like a business owner, not a software company." },
+    { "rule": "Never name any software, platform, CRM or vendor behind Scaalus, and never describe Scaalus as white-label, resold or built on another product.", "why": "Scaalus is always presented as its own system." },
+    { "rule": "Make the cost of a lost job felt.", "why": "The audience sells high-ticket work; one missed call can be a lost job worth thousands. Pain → result is the core story." },
+    { "rule": "One message per post, headline under 10 words when possible.", "why": "Owners read posts in seconds between jobs." },
+    { "rule": "Never invent numbers, stats, testimonials or client names. Use real figures only, or a clear placeholder like [X jobs].", "why": "Made-up proof breaks trust and can break advertising rules." },
+    { "rule": "Every post ends on scaalus.com or a clear next step (book a demo, start a trial).", "why": "Each post should move the owner one step closer to a call." }
+  ],
+
+  "voice": {
+    "tone": "Simple, clear, confident. Results-first. Talks like a business owner, not a tech company.",
+    "personality": ["Trustworthy", "Simple", "Reliable", "Professional", "Results-first"],
+    "say": ["booked jobs", "every call answered", "no lead goes cold", "found first on Google", "a calendar full of jobs", "while you're on the job"],
+    "avoid": ["CRM", "automation workflow", "integration", "API", "funnel", "AI-powered platform", "white-label", "software names", "growth hacking", "synergy"]
+  },
+
+  "open-questions": [
+    "Pricing and trial terms: the v1.0 guidelines showed sample copy ($297 / month, 7-day free trial, no contract). Confirm before using them as facts."
+  ]
+}

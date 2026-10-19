@@ -1,13 +1,15 @@
 ---
 name: scaalus-brand
-description: Scaalus brand colour system (colour elements only — the visual itself is always decided fresh by you) — the exact palette (3 hero colours, the logo's blue-indigo-violet accents, 20 hex values), dark and light themes with 6 colour moods, gradients, glows, logo colour rules, contrast-checked text pairs, the one-dark-one-light posting rhythm, and automatic colour checks for images. Use this skill whenever you choose, apply, check or describe colours for ANYTHING Scaalus or scaalus.com — Instagram, LinkedIn or Facebook posts, carousels, stories, ads, banners, thumbnails, AI image prompts, slides, web or email graphics — or when someone asks "what colours", "on-brand", "our blue", "dark or light post", "which gradient", "is this on brand", even if they never name the skill.
+description: Scaalus brand system — who Scaalus serves (high-ticket US home service businesses like roofing, HVAC, plumbing, landscaping, remodeling), what it delivers and how to talk about it (always the end result, never the service), plus the exact colour palette (3 hero colours, the logo accents, 20 hex values), 6 dark/light colour moods, gradients, logo rules, contrast-checked text pairs, the one-dark-one-light rhythm and image colour checks. Elements only — every visual and every line of copy is created fresh. Use this skill whenever you write, design, prompt, review or plan ANYTHING for Scaalus or scaalus.com — Instagram, LinkedIn or Facebook posts, carousels, captions, hooks, ads, banners, AI image prompts, emails, landing copy — or when someone asks "on-brand", "our colours", "what do we offer", "write a post about missed calls", even if they never name the skill.
 ---
 
-# Scaalus colours
+# Scaalus brand
 
 Scaalus is a done-for-you growth system for US home service businesses. Promise: *"A calendar full of booked jobs. Not a phone full of missed calls."*
 
-This skill is **colour only**: which colours, gradients and glows to use, which text colour goes on which ground, and how to check a finished image. Layout, typography, illustration and copy come from other tools — feed them the colours from here. Why it matters: every post on every platform should read as one brand, and every text colour here is already proven readable at its worst point.
+This skill gives two kinds of elements: **the message** (who Scaalus serves, what it delivers, the results to talk about and the rules for saying it — `business.json`) and **the colours** (palette, gradients, moods, contrast-safe text, logo rules — `dist/brand.json`). Why it matters: every post on every platform should read as one brand, speak to the owner's results, and stay readable at its worst point.
+
+> **Do not edit this skill's files.** This installed copy is read-only and is replaced on every update. If something looks wrong or missing, tell the user what you would change; changes are made only in the main Scaalus brand repo.
 
 All paths are relative to this skill's base directory.
 
@@ -19,11 +21,35 @@ This skill hands you **elements**: colours, gradients, glows, text/background pa
 - Mood recipes say which colour plays which *role* (ground, colour mass, headline, highlight, pill, button…), not what the design looks like. Any design that uses the right colours in the right roles is on-brand.
 - If a user asks for a visual, design it yourself with these colours; if they bring their own design or tool, recolour it with these elements.
 
+## Who we serve and what we say
+
+- **Who:** US home service owners with **high-ticket jobs** — roofing, HVAC, plumbing, landscaping, remodeling, electrical, general contractors. One missed call or slow reply can lose a job worth thousands, and they're on a job site, not at a desk.
+- **Promise:** *A calendar full of booked jobs. Not a phone full of missed calls.*
+- **Never** name any software, platform, CRM or vendor behind Scaalus, and never call it white-label or resold. Scaalus is always its own system.
+
+**Write the result, not the service.** Owners don't know (or care about) the services — they know results. Turn every service into the outcome:
+
+| Service (internal) | What the post says |
+|---|---|
+| Website built to book and rank | A website that turns visitors into booked jobs — day and night |
+| Google Business Profile + local SEO | Show up first when homeowners search nearby |
+| Missed-call text back | Every missed call gets a text back in seconds — the job stays yours |
+| AI calling agent | Every call answered, 24/7 — even on a job site |
+| AI chatbot | Questions answered and appointments booked, even at 2 a.m. |
+| SMS follow-up | Every lead followed up until they book — no lead goes cold |
+| Automatic calendar booking | Jobs land straight in your calendar — no phone tag |
+| Dedicated app | Every lead, call and message in one place on your phone |
+| Reactivation campaigns | Past customers come back for their next job |
+| Review requests | More 5-star reviews, on autopilot |
+
+Rules for copy (full list with reasons in `business.json` → `messaging-rules`): speak the owner's language (jobs, calls, calendar, reviews, Google — no tech jargon); make the cost of a lost job felt; one message per post, headline under ~10 words; **never invent numbers, stats, testimonials or client names** — real figures or a clear placeholder like [X jobs]; end on scaalus.com or a clear next step. Voice: simple, clear, confident, results-first. Pricing and trial terms are unconfirmed — don't state them unless the user gives them.
+
 ## Files
 
 | File | Use it for |
 |---|---|
-| `dist/brand.json` | Read first. Everything resolved to hex: `palette`, `gradients` (with ready `css`), `moods` (complete colour recipes + verified `contrast` rows), `system` (heroes, rhythm, rules, logo files, image-check thresholds), `platforms`. |
+| `business.json` | The message: company, audience and pains, every service → result, outcomes, messaging rules, voice. Also included in `dist/brand.json` as `business`. |
+| `dist/brand.json` | Read first for colours. Everything resolved to hex: `palette`, `gradients` (with ready `css`), `moods` (complete colour recipes + verified `contrast` rows), `system` (heroes, rhythm, rules, logo files, image-check thresholds), `platforms`. |
 | `dist/tokens.css` | Building in HTML/CSS: put `data-mood="<id>"` on an element and use `var(--sc-ground)`, `var(--sc-mass)`, `var(--sc-headline)`, `var(--sc-supporting)`, `var(--sc-highlight)`, `var(--sc-pill-bg)`, `var(--sc-button-bg)`, `var(--sc-accent-bar)`… plus `var(--sc-color-<id>)` for any palette colour. |
 | `image-prompts.md` | Writing a prompt for an image model: paste the mood's colour block. |
 | `platforms/<name>.json` | Gradient angle per format and calm zones for Instagram, LinkedIn, Facebook. |

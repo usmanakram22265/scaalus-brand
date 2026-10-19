@@ -40,5 +40,5 @@ v3 rebuilds the palette around the logo. Blue leads, the logo's indigo and viole
 
 ## Not yet migrated
 
-- `../website/scaalus.com` (Tailwind) and `../website/ghl-forms` still use v1.0 colours. To move them to v3, map each colour with the "What changed" table above.
+- The website and its booking forms still use v1.0 colours. To move them to v3, map each colour with the "What changed" table above.
 - Accent colours (alert red, success green, star gold) are still undecided.
